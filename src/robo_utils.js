@@ -39,8 +39,8 @@ function headlineTopic(dataSelect) {
         topic2 = "Unemployment"
     } else if (keyWord=="students") {
         topic2 = "Proportion of students"
-    } else if (keyWord=="all") {
-        if (keyWord2=="popuation") {
+    } else if (keyWord=="all" | keyWord=="male" | keyWord=="female") {
+        if (keyWord2=="population") {
             topic2 = "Population"
         } else if (keyWord=="agemed") {
             topic2 = "Average age"

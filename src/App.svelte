@@ -33,7 +33,7 @@
 			d.typenm = types[d.type].name;
 		});
 		options = res.sort((a, b) => a.name.localeCompare(b.name));
-		selected = options.find(d => d.name == 'Tredegar Park');
+		selected = options.find(d => d.name == 'Manchester');
 		loadEW();
 		loadArea(selected.code);
 	});

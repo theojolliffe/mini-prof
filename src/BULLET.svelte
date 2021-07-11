@@ -11,6 +11,10 @@
 <div class="section-2">
 
     <div>
+        <h1>{place.name}</h1>
+    </div>
+
+    <div>
         <p>{sentGenerator(place, ["Priorities", 0], 0)}</p>
     </div>
     
