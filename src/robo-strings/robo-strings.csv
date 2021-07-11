@@ -1,0 +1,5 @@
+varCode,comment,template
+ranking_1_sent,TOTAL POPULATION,"{Current?:{intro?Prior to 2011,:Between 2001 and 2011,}}{firstPara? {ladName}:{Current?This area: this area}} {Current?has:saw} {regionName}'s {ordinalSuffix} {Current?{size?{rankIsNeg?smallest:largest}:{rankIsNeg?lowest:highest}}:{changeNeg?{rankIsNeg?greatest decline in:slowest decline in}:{rankIsNeg?slowest growth in:greatest increase in}}} {measure}."
+relative_1_sent,MoreorLess,"{Current?The:{intro?Since the 2001 Census, the:Since 2001, the}} {measure} in {firstPara? {ladName}:this area} {Current?is:{changeNeg?has decreased:has increased}} {changeValue?by {changeValue}%;:} {adj} the average across the country."
+headline_1,Headline 1,"{ladName} becomes {topic}"
+headline_2,Headline 2,"{topic} {declinesRises} in {ladName}"

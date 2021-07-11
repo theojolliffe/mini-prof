@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   width="16">
+  <defs
+     id="defs889" />
+  <g
+     transform="translate(-392.1272,-13.516487)"
+     class="stack-group"
+     opacity="0.3"
+     id="g899" />
+  <g
+     transform="translate(-281.15012,50.347679)"
+     class="marker"
+     id="g935">
+    <circle
+       cx="289.15012"
+       cy="-42.347679"
+       r="8"
+       fill="#206095"
+       stroke-width="0"
+       id="circle933" />
+  </g>
+</svg>
