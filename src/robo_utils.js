@@ -55,7 +55,7 @@ function headGenerator(place) {
     // Find the highest rank that is change
     let dataSelect = [];
     for (let i=0; i<20; i++) {
-        if ("change" == place['Priorities'][i]['label'].split("_")[2]) {
+        if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" == place['Priorities'][i]['label'].split("_")[3] & "male" == place['Priorities'][i]['label'].split("_")[3]) {
             // Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
             if (place['Priorities'][i]['label'].split("_")[0] == "age10yr" | place['Priorities'][i]['label'].split("_")[0] == "travel" | place['Priorities'][i]['label'].split("_")[0] == "tenure" | place['Priorities'][i]['label'].split("_")[0] == "density") {
                 place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 5;
@@ -152,6 +152,48 @@ function sentGenerator(place, topics, pNum) {
 
     return roboSentence;
 }
+
+// This function creates sentences in single chunks for the first section 
+function bullGenerator(place, topics, pNum) {
+
+    // Find the highest rank that is change
+    let dataSelect = [];
+    for (let i=0; i<40; i++) {
+        if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" != place['Priorities'][i]['label'].split("_")[3] & "male" != place['Priorities'][i]['label'].split("_")[3]) {
+            // Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
+            if (place['Priorities'][i]['label'].split("_")[0] == "age10yr" | place['Priorities'][i]['label'].split("_")[0] == "travel" | place['Priorities'][i]['label'].split("_")[0] == "tenure" | place['Priorities'][i]['label'].split("_")[0] == "density") {
+                place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 5;
+            }
+            dataSelect.push(place['Priorities'][i])
+        }
+    }
+    dataSelect.sort(function(a, b) {
+        // Reorder the objects
+        if (a.sqrt < b.sqrt) return -1;
+        if (a.sqrt > b.sqrt) return 1;
+        return 0;
+    });
+    dataSelect.sort(function(a, b) {
+        // Select the highest abVal for equal change ranks
+        if (a.sqrt == b.sqrt) {
+            if (a.abVal < b.abVal) return 1;
+            if (a.abVal > b.abVal) return -1;
+        }
+        return 0;
+    });
+
+    console.log("**************** dataSelect", dataSelect)
+    console.log("*****************pnum", pNum)
+
+
+    let thisTopic = dataSelect[pNum]['label'].split("_")[0]
+    let thisRankType = (thisTopic=="population" | thisTopic=="agemed")? "value_rank_local" : "perc_rank_local";
+
+    let roboSentence2 = sentGenerator(place, ["data", thisTopic, thisRankType], pNum)
+    
+    return roboSentence2;
+}
+
 
 function changeNeg(place, topics, measure) {
     let changeNeg
@@ -262,4 +304,4 @@ function rankify(place, topic) {
     return ranks[Math.floor(Math.random() * 9)]
 }
 
-export { sentGenerator, headGenerator };
+export { sentGenerator, headGenerator, bullGenerator };

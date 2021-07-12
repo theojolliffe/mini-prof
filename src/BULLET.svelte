@@ -1,5 +1,5 @@
 <script>
-    import { sentGenerator } from './robo_utils.js';
+    import { bullGenerator } from './robo_utils.js';
 
     export let place;
 
@@ -15,26 +15,26 @@
     </div>
 
     <div>
-        <p>{sentGenerator(place, ["Priorities", 0], 0)}</p>
+        <p>{bullGenerator(place, ["Priorities", 0], 0)}</p>
     </div>
     
     <div>
-        <p>{sentGenerator(place, ["Priorities", 1], 1)}</p>
+        <p>{bullGenerator(place, ["Priorities", 1], 1)}</p>
     </div>
     
     <div>
-        <p>{sentGenerator(place, ["Priorities", 2], 2)}</p>
+        <p>{bullGenerator(place, ["Priorities", 2], 2)}</p>
     </div>
     
     <div>
-        <p>{sentGenerator(place, ["Priorities", 3], 3)}</p>
+        <p>{bullGenerator(place, ["Priorities", 3], 3)}</p>
     </div>
     <div>
-        <p>{sentGenerator(place, ["Priorities", 4], 4)}</p>
+        <p>{bullGenerator(place, ["Priorities", 4], 4)}</p>
     </div>
     
     <div>
-        <p>{sentGenerator(place, ["Priorities", 5], 5)}</p>
+        <p>{bullGenerator(place, ["Priorities", 5], 5)}</p>
     </div>
     
 </div>
