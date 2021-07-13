@@ -8,6 +8,16 @@ function uncap1(string) {
     } else { return string }
 }
 
+function uncap1ofEng(string) {
+    if (string.slice(0, 3)=="The") {
+        if (string.slice(-8, )=="Midlands") {
+            return string.charAt(0).toLowerCase() + string.slice(1)
+        } else {
+            return string.charAt(0).toLowerCase() + string.slice(1) + " of England";
+        }
+    } else { return string }
+}
+
 function ordinal_suffix_of(i) {
     if (i < 10) {
         return [
@@ -55,4 +65,4 @@ function adjectify(rank, words, breaks) {
     }
 }
 
-export { uncap1, regionThe, ordinal_suffix_of, adjectify };
+export { uncap1, uncap1ofEng, regionThe, ordinal_suffix_of, adjectify };

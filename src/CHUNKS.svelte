@@ -1,5 +1,5 @@
 <script>
-    import { sentGenerator } from './robo_utils.js';
+    import { sentGenerator, introPara } from './robo_utils.js';
     import ColChart from "./chart/ColChart.svelte";
 	import SpineChart from "./chart/SpineChart.svelte";
     import GridChart from "./chart/GridChart.svelte";
@@ -31,6 +31,12 @@
 </script>
 
 <h3>Little sentences/chunks of text for area profiles.</h3>
+
+<div style="padding-left: 15%; padding-right: 15%;">
+    <p>
+        {introPara(place)}
+    </p>
+</div>
 
 <div class="profile-grid mt">
 

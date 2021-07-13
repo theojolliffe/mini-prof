@@ -1,17 +1,97 @@
 import { types, codes } from "./config";
 import robojournalist from "robojournalist";
-import { adjectify, uncap1, regionThe, ordinal_suffix_of } from './robo_utils_pure_functions.js';
+import { adjectify, uncap1, uncap1ofEng, regionThe, ordinal_suffix_of } from './robo_utils_pure_functions.js';
 import strings from './robo-strings/robo-strings.csv';
+import ladLookup from './data/censusAreaLookup.csv';
+import countyLookup from './data/ladLookupOut.csv';
+import countyPopLookup from './data/countyPop.csv';
 
-// Transform csv to object
+// Transform robo string csv to object
 let roboStrings = {};
 strings.forEach(d => {roboStrings[d.varCode] = d.template;});
+
+// Transform lad lookup csv to object
+let ladType = {};
+ladLookup.forEach(d => {ladType[d['Code']] = d['Subgroup code'];});
+
+// Transform lad lookup csv to object
+let counties = {};
+countyLookup.forEach(d => {counties[d['LAD19CD']] = {"countyName": d['CTY19NM'], "countyCode": d['CTY19CD']};});
+
+// Transform lad lookup csv to object
+let countyPops = {};
+countyPopLookup.forEach(d => {countyPops[d['Code']] = {"Name": d['Name'], "Geography": d['Geography'], "Rank": d['Rank']};});
+
 
 // A variable to keep track of previous sentence
 let intro = true;
 
+// Create intro paragraph for area profile page
+function introPara(place) {
+
+    // Breaks to determine the decile of national ranks for wards and districts
+    let breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
+
+    let subGroupLookup = {
+        "1a1r": "a rural-urban fringe area", 
+        "1b1r": "an affluent rural area", 
+        "1b2r": "a growing rural area", 
+        "2a1r": "a city", 
+        "2b1r": "a university city", 
+        "3a2r": "a sparse area of countryside", 
+        "3a1r": "an agricultural area", 
+        "3b1r": "an ageing coastal area",
+        "3b2r": "a seaside  area",
+        "3b1r": "an ageing coastal area",
+        "4a1r": "an ethnically diverse urban area",
+        "5a1r": "a cosmopolitan London area",
+        "6a2r": "an area with a mining history",
+        "6a3r": "a service economy area",
+        "6a1r": "an area with a manufacturing history",
+        "7a1r": "an area of countryside",
+        "7c2r": "a prosperous suburban area",
+        "7c1r": "a prosperous semi-rural area",
+        "8a1r": "a multi-ethnic industrial area",
+        "8a2r": "an urban area",
+        "8b1r": "a city periphery",
+        "8b2r": "an area of urban expansion",
+    }
+    let gssLookup = {"E09": "London borough", "E08": "metropolitan district", "E07": "non-metropolitan district", "E06": "unitary authority"}
+
+    let intro = counties[place.code]?
+    robojournalist(roboStrings["intro"], {
+        ladName: place.name,
+        placeType: subGroupLookup[ladType[place.code]],
+        gssType: gssLookup[place.code.slice(0,3)],
+        county: counties[place.code]['countyName'],
+        parentArea: uncap1ofEng(robojournalist('{place ^regionThe}', { place: place.parents[0].name, regionThe })),
+        ordPop: ordinal_suffix_of(Math.abs(place.data.population.value_rank[2011].all)),
+        smallestLargest: place.data.population.value_rank[2011].all<0?"smallest":"largest",
+        popu: place.data.population.value[2011].all.toLocaleString(),
+        popChange: Math.round(place.data.population.value.change.all),
+        moreLess: adjectify(place.data.population.value_rank.change.all, ['more', 'less'], breaks),
+        ordPopCounty: ordinal_suffix_of(countyPops[counties[place.code]['countyCode']]["Rank"]),
+        mostLeast: "most",
+        parentType: countyPops[counties[place.code]['countyCode']]["Geography"],
+    }) :
+    robojournalist(roboStrings["intro2"], {
+        ladName: place.name,
+        placeType: subGroupLookup[ladType[place.code]],
+        gssType: gssLookup[place.code.slice(0,3)],
+        parentArea: uncap1ofEng(robojournalist('{place ^regionThe}', { place: place.parents[0].name, regionThe })),
+        ordPop: ordinal_suffix_of(Math.abs(place.data.population.value_rank[2011].all)),
+        smallestLargest: place.data.population.value_rank[2011].all<0?"smallest":"largest",
+        popu: place.data.population.value[2011].all.toLocaleString(),
+        popChange: Math.round(place.data.population.value.change.all),
+        moreLess: adjectify(place.data.population.value_rank.change.all, ['more', 'less'], breaks),
+    })
+
+    return intro
+}
+
 function headlineTopic(dataSelect) {
     let topic2;
+
     let keyWord = dataSelect[0].label.split("_")[3];
     let keyWord2 = dataSelect[0].label.split("_")[0];
 
@@ -49,13 +129,13 @@ function headlineTopic(dataSelect) {
     return topic2
 }
 
-// This function creates sentences in single chunks for the first section 
+// This function creates a headline a subheading 
 function headGenerator(place) {
 
-    // Find the highest rank that is change
+    // Filter ranks to only include change ranks
     let dataSelect = [];
     for (let i=0; i<20; i++) {
-        if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" == place['Priorities'][i]['label'].split("_")[3] & "male" == place['Priorities'][i]['label'].split("_")[3]) {
+        if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" != place['Priorities'][i]['label'].split("_")[3] & "male" != place['Priorities'][i]['label'].split("_")[3]) {
             // Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
             if (place['Priorities'][i]['label'].split("_")[0] == "age10yr" | place['Priorities'][i]['label'].split("_")[0] == "travel" | place['Priorities'][i]['label'].split("_")[0] == "tenure" | place['Priorities'][i]['label'].split("_")[0] == "density") {
                 place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 5;
@@ -113,6 +193,7 @@ function sentGenerator(place, topics, pNum) {
     let nationRank = (dataSelect['label']?place['data'][dataSelect['label'].split("_")[0]][dataSelect['label'].split("_")[1]][isChange?"change":"2011"][measure[2]?measure[3]:"all"]:place['data'][topics[1]][topics[2].substring(0, topics[2].length - 6)][isChange?"change":"2011"][measure[2]?measure[3]:"all"]);
     let parentName = place.parents[0].name
 
+    // Breaks to determine the decile of national ranks for wards and districts
     let breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
     let LocalBreaks = []; for (let i=0; i<10; i++) {LocalBreaks.push(Math.round(i * place.siblings.length / 10))}
 
@@ -304,4 +385,4 @@ function rankify(place, topic) {
     return ranks[Math.floor(Math.random() * 9)]
 }
 
-export { sentGenerator, headGenerator, bullGenerator };
+export { sentGenerator, headGenerator, bullGenerator, introPara };

@@ -1,0 +1,31 @@
+Code,Name,Geography,Population,Rank
+E10000020,Norfolk,non-metropolitan county,"914,039",1
+E10000028,Staffordshire,non-metropolitan county,"883,172",2
+E10000032,West Sussex,non-metropolitan county,"867,635",3
+E10000024,Nottinghamshire,non-metropolitan county,"833,377",4
+E10000008,Devon,non-metropolitan county,"810,716",5
+E10000007,Derbyshire,non-metropolitan county,"807,183",6
+E10000019,Lincolnshire,non-metropolitan county,"766,333",7
+E10000029,Suffolk,non-metropolitan county,"761,246",8
+E10000018,Leicestershire,non-metropolitan county,"713,085",9
+E10000025,Oxfordshire,non-metropolitan county,"696,880",10
+E10000003,Cambridgeshire,non-metropolitan county,"657,204",11
+E10000013,Gloucestershire,non-metropolitan county,"640,650",12
+E10000023,North Yorkshire,non-metropolitan county,"620,610",13
+E10000034,Worcestershire,non-metropolitan county,"598,070",14
+E10000031,Warwickshire,non-metropolitan county,"583,786",15
+E10000027,Somerset,non-metropolitan county,"563,851",16
+E10000011,East Sussex,non-metropolitan county,"558,852",17
+E10000006,Cumbria,non-metropolitan county,"499,781",18
+E10000016,Kent,non-metropolitan county,"1,589,057",19
+E10000012,Essex,non-metropolitan county,"1,497,759",20
+E10000014,Hampshire,non-metropolitan county,"1,389,206",21
+E10000017,Lancashire,non-metropolitan county,"1,227,076",22
+E10000030,Surrey,non-metropolitan county,"1,199,870",23
+E10000015,Hertfordshire,non-metropolitan county,"1,195,672",24
+E11000005,West Midlands (Met County),metropolitan county,"2,939,927",1
+E11000001,Greater Manchester (Met County),metropolitan county,"2,848,286",2
+E11000006,West Yorkshire (Met County),metropolitan county,"2,345,235",3
+E11000002,Merseyside (Met County),metropolitan county,"1,434,256",4
+E11000003,South Yorkshire (Met County),metropolitan county,"1,415,054",5
+E11000007,Tyne and Wear (Met County),metropolitan county,"1,146,624",6
