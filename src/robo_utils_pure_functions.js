@@ -49,8 +49,7 @@ function ordinal_suffix_of(i) {
 }
 
 function adjectify(rank, words, breaks) {
-    console.log('rank', rank),
-    console.log('breaks', breaks),
+
     words[2] = words[2] ? words[2] : '';
     if (rank < breaks[2]) {
         return 'significantly ' + words[0] + ' than';

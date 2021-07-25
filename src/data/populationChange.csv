@@ -1,0 +1,673 @@
+code,lad,2001,2011,change,topic,parent
+E06000001,Hartlepool,88611,92028,3.86,population_all,North East
+E06000002,Middlesbrough,134855,138412,2.64,population_all,North East
+E06000003,Redcar and Cleveland,139132,135177,-2.84,population_all,North East
+E06000004,Stockton-on-Tees,178408,191610,7.4,population_all,North East
+E06000005,Darlington,97838,105564,7.9,population_all,North East
+E06000006,Halton,118208,125746,6.38,population_all,North West
+E06000007,Warrington,191080,202228,5.83,population_all,North West
+E06000008,Blackburn with Darwen,137470,147489,7.29,population_all,North West
+E06000009,Blackpool,142283,142065,-0.15,population_all,North West
+E06000010,"Kingston upon Hull, City of",243589,256406,5.26,population_all,Yorkshire and The Humber
+E06000011,East Riding of Yorkshire,314113,334179,6.39,population_all,Yorkshire and The Humber
+E06000012,North East Lincolnshire,157979,159616,1.04,population_all,Yorkshire and The Humber
+E06000013,North Lincolnshire,152849,167446,9.55,population_all,Yorkshire and The Humber
+E06000014,York,181094,198051,9.36,population_all,Yorkshire and The Humber
+E06000015,Derby,221708,248752,12.2,population_all,East Midlands
+E06000016,Leicester,279921,329839,17.83,population_all,East Midlands
+E06000017,Rutland,34563,37369,8.12,population_all,East Midlands
+E06000018,Nottingham,266988,305680,14.49,population_all,East Midlands
+E06000019,"Herefordshire, County of",174871,183477,4.92,population_all,West Midlands
+E06000020,Telford and Wrekin,158325,166641,5.25,population_all,West Midlands
+E06000021,Stoke-on-Trent,240636,249008,3.48,population_all,West Midlands
+E06000022,Bath and North East Somerset,169040,176016,4.13,population_all,South West
+E06000023,"Bristol, City of",380615,428234,12.51,population_all,South West
+E06000024,North Somerset,188564,202566,7.43,population_all,South West
+E06000025,South Gloucestershire,245641,262767,6.97,population_all,South West
+E06000026,Plymouth,240720,256384,6.51,population_all,South West
+E06000027,Torbay,129706,130959,0.97,population_all,South West
+E06000030,Swindon,180051,209156,16.16,population_all,South West
+E06000031,Peterborough,156061,183631,17.67,population_all,East
+E06000032,Luton,184371,203201,10.21,population_all,East
+E06000033,Southend-on-Sea,160257,173658,8.36,population_all,East
+E06000034,Thurrock,143128,157705,10.18,population_all,East
+E06000035,Medway,249488,263925,5.79,population_all,South East
+E06000036,Bracknell Forest,109617,113205,3.27,population_all,South East
+E06000037,West Berkshire,144483,153822,6.46,population_all,South East
+E06000038,Reading,143096,155698,8.81,population_all,South East
+E06000039,Slough,119067,140205,17.75,population_all,South East
+E06000040,Windsor and Maidenhead,133626,144560,8.18,population_all,South East
+E06000041,Wokingham,150229,154380,2.76,population_all,South East
+E06000042,Milton Keynes,207057,248821,20.17,population_all,South East
+E06000043,Brighton and Hove,247817,273369,10.31,population_all,South East
+E06000044,Portsmouth,186701,205056,9.83,population_all,South East
+E06000045,Southampton,217445,236882,8.94,population_all,South East
+E06000046,Isle of Wight,132731,138265,4.17,population_all,South East
+E06000047,County Durham,493470,513242,4.01,population_all,North East
+E06000049,Cheshire East,351817,370127,5.2,population_all,North West
+E06000050,Cheshire West and Chester,321971,329608,2.37,population_all,North West
+E06000051,Shropshire,283173,306129,8.11,population_all,West Midlands
+E06000052,Cornwall,499114,532273,6.64,population_all,South West
+E06000053,Isles of Scilly,1988,2203,10.81,population_all,South West
+E06000054,Wiltshire,432973,470981,8.78,population_all,South West
+E06000055,Bedford,147911,157479,6.47,population_all,East
+E06000056,Central Bedfordshire,233661,254381,8.87,population_all,East
+E06000057,Northumberland,307190,316028,2.88,population_all,North East
+E06000058,"Bournemouth, Christchurch and Poole",346597,378888,9.32,population_all,South West
+E06000059,Dorset,345869,365153,5.58,population_all,South West
+E06000060,Buckinghamshire,479026,505283,5.48,population_all,South East
+E07000008,Cambridge,108863,123867,13.78,population_all,East
+E07000009,East Cambridgeshire,73214,83818,14.48,population_all,East
+E07000010,Fenland,83519,95262,14.06,population_all,East
+E07000011,Huntingdonshire,156954,169508,8.0,population_all,East
+E07000012,South Cambridgeshire,130108,148755,14.33,population_all,East
+E07000026,Allerdale,93492,96422,3.13,population_all,North West
+E07000027,Barrow-in-Furness,71980,69087,-4.02,population_all,North West
+E07000028,Carlisle,100739,107524,6.74,population_all,North West
+E07000029,Copeland,69318,70603,1.85,population_all,North West
+E07000030,Eden,49777,52564,5.6,population_all,North West
+E07000031,South Lakeland,102301,103658,1.33,population_all,North West
+E07000032,Amber Valley,116471,122309,5.01,population_all,East Midlands
+E07000033,Bolsover,71766,75866,5.71,population_all,East Midlands
+E07000034,Chesterfield,98845,103788,5.0,population_all,East Midlands
+E07000035,Derbyshire Dales,69469,71116,2.37,population_all,East Midlands
+E07000036,Erewash,110099,112081,1.8,population_all,East Midlands
+E07000037,High Peak,89433,90892,1.63,population_all,East Midlands
+E07000038,North East Derbyshire,96940,99023,2.15,population_all,East Midlands
+E07000039,South Derbyshire,81562,94611,16.0,population_all,East Midlands
+E07000040,East Devon,125520,132457,5.53,population_all,South West
+E07000041,Exeter,111076,117773,6.03,population_all,South West
+E07000042,Mid Devon,69774,77750,11.43,population_all,South West
+E07000043,North Devon,87508,93667,7.04,population_all,South West
+E07000044,South Hams,81849,83140,1.58,population_all,South West
+E07000045,Teignbridge,120958,124220,2.7,population_all,South West
+E07000046,Torridge,58965,63839,8.27,population_all,South West
+E07000047,West Devon,48843,53553,9.64,population_all,South West
+E07000061,Eastbourne,89667,99412,10.87,population_all,South East
+E07000062,Hastings,85029,90254,6.14,population_all,South East
+E07000063,Lewes,92177,97502,5.78,population_all,South East
+E07000064,Rother,85428,90588,6.04,population_all,South East
+E07000065,Wealden,140023,148915,6.35,population_all,South East
+E07000066,Basildon,165668,174497,5.33,population_all,East
+E07000067,Braintree,132179,147084,11.28,population_all,East
+E07000068,Brentwood,68456,73601,7.52,population_all,East
+E07000069,Castle Point,86608,88011,1.62,population_all,East
+E07000070,Chelmsford,157072,168310,7.15,population_all,East
+E07000071,Colchester,155796,173074,11.09,population_all,East
+E07000072,Epping Forest,120896,124659,3.11,population_all,East
+E07000073,Harlow,78768,81944,4.03,population_all,East
+E07000074,Maldon,59418,61629,3.72,population_all,East
+E07000075,Rochford,78489,83287,6.11,population_all,East
+E07000076,Tendring,138539,138048,-0.35,population_all,East
+E07000077,Uttlesford,68946,79443,15.22,population_all,East
+E07000078,Cheltenham,110013,115732,5.2,population_all,South West
+E07000079,Cotswold,80376,82881,3.12,population_all,South West
+E07000080,Forest of Dean,79982,81961,2.47,population_all,South West
+E07000081,Gloucester,109885,121688,10.74,population_all,South West
+E07000082,Stroud,107898,112779,4.52,population_all,South West
+E07000083,Tewkesbury,76405,81943,7.25,population_all,South West
+E07000084,Basingstoke and Deane,152573,167799,9.98,population_all,South East
+E07000085,East Hampshire,109274,115608,5.8,population_all,South East
+E07000086,Eastleigh,116169,125199,7.77,population_all,South East
+E07000087,Fareham,107977,111581,3.34,population_all,South East
+E07000088,Gosport,76415,82622,8.12,population_all,South East
+E07000089,Hart,83505,91033,9.02,population_all,South East
+E07000090,Havant,116849,120684,3.28,population_all,South East
+E07000091,New Forest,169331,176462,4.21,population_all,South East
+E07000092,Rushmoor,90987,93807,3.1,population_all,South East
+E07000093,Test Valley,109801,116398,6.01,population_all,South East
+E07000094,Winchester,107222,116595,8.74,population_all,South East
+E07000095,Broxbourne,87054,93609,7.53,population_all,East
+E07000096,Dacorum,137799,144847,5.11,population_all,East
+E07000098,Hertsmere,94450,100031,5.91,population_all,East
+E07000099,North Hertfordshire,116908,127114,8.73,population_all,East
+E07000102,Three Rivers,82848,87317,5.39,population_all,East
+E07000103,Watford,79726,90301,13.26,population_all,East
+E07000105,Ashford,102661,117956,14.9,population_all,South East
+E07000106,Canterbury,135278,151145,11.73,population_all,South East
+E07000107,Dartford,85911,97365,13.33,population_all,South East
+E07000108,Dover,104566,111674,6.8,population_all,South East
+E07000109,Gravesham,95717,101720,6.27,population_all,South East
+E07000110,Maidstone,138948,155143,11.66,population_all,South East
+E07000111,Sevenoaks,109305,114893,5.11,population_all,South East
+E07000112,Folkestone and Hythe,96238,107969,12.19,population_all,South East
+E07000113,Swale,122801,135835,10.61,population_all,South East
+E07000114,Thanet,126702,134186,5.91,population_all,South East
+E07000115,Tonbridge and Malling,107561,120805,12.31,population_all,South East
+E07000116,Tunbridge Wells,104030,115049,10.59,population_all,South East
+E07000117,Burnley,89542,87059,-2.77,population_all,North West
+E07000118,Chorley,100449,107155,6.68,population_all,North West
+E07000119,Fylde,73217,75757,3.47,population_all,North West
+E07000120,Hyndburn,81496,80734,-0.94,population_all,North West
+E07000121,Lancaster,133914,138375,3.33,population_all,North West
+E07000122,Pendle,89248,89452,0.23,population_all,North West
+E07000123,Preston,129633,140202,8.15,population_all,North West
+E07000124,Ribble Valley,53960,57132,5.88,population_all,North West
+E07000125,Rossendale,65652,67982,3.55,population_all,North West
+E07000126,South Ribble,103867,109057,5.0,population_all,North West
+E07000127,West Lancashire,108378,110685,2.13,population_all,North West
+E07000128,Wyre,105618,107749,2.02,population_all,North West
+E07000129,Blaby,90252,93915,4.06,population_all,East Midlands
+E07000130,Charnwood,153462,166100,8.24,population_all,East Midlands
+E07000131,Harborough,76559,85382,11.52,population_all,East Midlands
+E07000132,Hinckley and Bosworth,100141,105078,4.93,population_all,East Midlands
+E07000133,Melton,47866,50376,5.24,population_all,East Midlands
+E07000134,North West Leicestershire,85503,93468,9.32,population_all,East Midlands
+E07000135,Oadby and Wigston,55795,56170,0.67,population_all,East Midlands
+E07000136,Boston,55750,64637,15.94,population_all,East Midlands
+E07000137,East Lindsey,130447,136401,4.56,population_all,East Midlands
+E07000138,Lincoln,85595,93541,9.28,population_all,East Midlands
+E07000139,North Kesteven,94024,107766,14.62,population_all,East Midlands
+E07000140,South Holland,76522,88270,15.35,population_all,East Midlands
+E07000141,South Kesteven,124792,133788,7.21,population_all,East Midlands
+E07000142,West Lindsey,79515,89250,12.24,population_all,East Midlands
+E07000143,Breckland,121418,130491,7.47,population_all,East
+E07000144,Broadland,118513,124646,5.17,population_all,East
+E07000145,Great Yarmouth,90810,97277,7.12,population_all,East
+E07000146,King's Lynn and West Norfolk,135345,147451,8.94,population_all,East
+E07000147,North Norfolk,98382,101499,3.17,population_all,East
+E07000148,Norwich,121550,132512,9.02,population_all,East
+E07000149,South Norfolk,110710,124012,12.02,population_all,East
+E07000150,Corby,53174,61255,15.2,population_all,East Midlands
+E07000151,Daventry,72193,77843,7.83,population_all,East Midlands
+E07000152,East Northamptonshire,76550,86765,13.34,population_all,East Midlands
+E07000153,Kettering,81844,93475,14.21,population_all,East Midlands
+E07000154,Northampton,194103,212069,9.26,population_all,East Midlands
+E07000155,South Northamptonshire,79293,85189,7.44,population_all,East Midlands
+E07000156,Wellingborough,72519,75356,3.91,population_all,East Midlands
+E07000163,Craven,53620,55409,3.34,population_all,Yorkshire and The Humber
+E07000164,Hambleton,84111,89140,5.98,population_all,Yorkshire and The Humber
+E07000165,Harrogate,151336,157869,4.32,population_all,Yorkshire and The Humber
+E07000166,Richmondshire,47010,51965,10.54,population_all,Yorkshire and The Humber
+E07000167,Ryedale,50872,51751,1.73,population_all,Yorkshire and The Humber
+E07000168,Scarborough,106243,108793,2.4,population_all,Yorkshire and The Humber
+E07000169,Selby,76468,83449,9.13,population_all,Yorkshire and The Humber
+E07000170,Ashfield,111155,119497,7.5,population_all,East Midlands
+E07000171,Bassetlaw,107713,112863,4.78,population_all,East Midlands
+E07000172,Broxtowe,107570,109487,1.78,population_all,East Midlands
+E07000173,Gedling,112019,113543,1.36,population_all,East Midlands
+E07000174,Mansfield,98181,104466,6.4,population_all,East Midlands
+E07000175,Newark and Sherwood,106273,114817,8.04,population_all,East Midlands
+E07000176,Rushcliffe,105599,111129,5.24,population_all,East Midlands
+E07000177,Cherwell,131785,141868,7.65,population_all,South East
+E07000178,Oxford,134248,151906,13.15,population_all,South East
+E07000179,South Oxfordshire,128188,134257,4.73,population_all,South East
+E07000180,Vale of White Horse,115627,120988,4.64,population_all,South East
+E07000181,West Oxfordshire,95640,104779,9.56,population_all,South East
+E07000187,Mendip,103869,109279,5.21,population_all,South West
+E07000188,Sedgemoor,105881,114588,8.22,population_all,South West
+E07000189,South Somerset,150969,161243,6.81,population_all,South West
+E07000192,Cannock Chase,92126,97462,5.79,population_all,West Midlands
+E07000193,East Staffordshire,103770,113583,9.46,population_all,West Midlands
+E07000194,Lichfield,93232,100654,7.96,population_all,West Midlands
+E07000195,Newcastle-under-Lyme,122030,123871,1.51,population_all,West Midlands
+E07000196,South Staffordshire,105896,108131,2.11,population_all,West Midlands
+E07000197,Stafford,120670,130869,8.45,population_all,West Midlands
+E07000198,Staffordshire Moorlands,94489,97106,2.77,population_all,West Midlands
+E07000199,Tamworth,74531,76813,3.06,population_all,West Midlands
+E07000200,Babergh,83461,87740,5.13,population_all,East
+E07000202,Ipswich,117069,133384,13.94,population_all,East
+E07000203,Mid Suffolk,86837,96731,11.39,population_all,East
+E07000207,Elmbridge,121936,130875,7.33,population_all,South East
+E07000208,Epsom and Ewell,67059,75102,11.99,population_all,South East
+E07000209,Guildford,129701,137183,5.77,population_all,South East
+E07000210,Mole Valley,80287,85375,6.34,population_all,South East
+E07000211,Reigate and Banstead,126523,137835,8.94,population_all,South East
+E07000212,Runnymede,78033,80510,3.17,population_all,South East
+E07000213,Spelthorne,90390,95598,5.76,population_all,South East
+E07000214,Surrey Heath,80314,86144,7.26,population_all,South East
+E07000215,Tandridge,79267,82998,4.71,population_all,South East
+E07000216,Waverley,115665,121572,5.11,population_all,South East
+E07000217,Woking,89840,99198,10.42,population_all,South East
+E07000218,North Warwickshire,61860,62014,0.25,population_all,West Midlands
+E07000219,Nuneaton and Bedworth,119132,125252,5.14,population_all,West Midlands
+E07000220,Rugby,87453,100075,14.43,population_all,West Midlands
+E07000221,Stratford-on-Avon,111484,120485,8.07,population_all,West Midlands
+E07000222,Warwick,125931,137648,9.3,population_all,West Midlands
+E07000223,Adur,59627,61182,2.61,population_all,South East
+E07000224,Arun,140759,149518,6.22,population_all,South East
+E07000225,Chichester,106450,113794,6.9,population_all,South East
+E07000226,Crawley,99744,106597,6.87,population_all,South East
+E07000227,Horsham,122088,131301,7.55,population_all,South East
+E07000228,Mid Sussex,127378,139860,9.8,population_all,South East
+E07000229,Worthing,97568,104640,7.25,population_all,South East
+E07000234,Bromsgrove,87837,93637,6.6,population_all,West Midlands
+E07000235,Malvern Hills,72172,74631,3.41,population_all,West Midlands
+E07000236,Redditch,78807,84214,6.86,population_all,West Midlands
+E07000237,Worcester,93353,98768,5.8,population_all,West Midlands
+E07000238,Wychavon,112957,116944,3.53,population_all,West Midlands
+E07000239,Wyre Forest,96981,97975,1.02,population_all,West Midlands
+E07000240,St Albans,129005,140664,9.04,population_all,East
+E07000241,Welwyn Hatfield,97553,110535,13.31,population_all,East
+E07000242,East Hertfordshire,128919,137687,6.8,population_all,East
+E07000243,Stevenage,79715,83957,5.32,population_all,East
+E07000244,East Suffolk,227483,239552,5.31,population_all,East
+E07000245,West Suffolk,153703,170756,11.09,population_all,East
+E07000246,Somerset West and Taunton,137374,144862,5.45,population_all,South West
+E08000001,Bolton,261037,276786,6.03,population_all,North West
+E08000002,Bury,180608,185060,2.47,population_all,North West
+E08000003,Manchester,392819,503127,28.08,population_all,North West
+E08000004,Oldham,217273,224897,3.51,population_all,North West
+E08000005,Rochdale,205357,211699,3.09,population_all,North West
+E08000006,Salford,216103,233933,8.25,population_all,North West
+E08000007,Stockport,284528,283275,-0.44,population_all,North West
+E08000008,Tameside,213043,219324,2.95,population_all,North West
+E08000009,Trafford,210145,226578,7.82,population_all,North West
+E08000010,Wigan,301415,317849,5.45,population_all,North West
+E08000011,Knowsley,150459,145893,-3.03,population_all,North West
+E08000012,Liverpool,439473,466415,6.13,population_all,North West
+E08000013,St. Helens,176843,175308,-0.87,population_all,North West
+E08000014,Sefton,282958,273790,-3.24,population_all,North West
+E08000015,Wirral,312293,319783,2.4,population_all,North West
+E08000016,Barnsley,218063,231221,6.03,population_all,Yorkshire and The Humber
+E08000017,Doncaster,286866,302402,5.42,population_all,Yorkshire and The Humber
+E08000018,Rotherham,248175,257280,3.67,population_all,Yorkshire and The Humber
+E08000019,Sheffield,513234,552698,7.69,population_all,Yorkshire and The Humber
+E08000021,Newcastle upon Tyne,259536,280177,7.95,population_all,North East
+E08000022,North Tyneside,191659,200801,4.77,population_all,North East
+E08000023,South Tyneside,152785,148127,-3.05,population_all,North East
+E08000024,Sunderland,280807,275506,-1.89,population_all,North East
+E08000025,Birmingham,977087,1073045,9.82,population_all,West Midlands
+E08000026,Coventry,300848,316960,5.36,population_all,West Midlands
+E08000027,Dudley,305155,312925,2.55,population_all,West Midlands
+E08000028,Sandwell,282904,308063,8.89,population_all,West Midlands
+E08000029,Solihull,199517,206674,3.59,population_all,West Midlands
+E08000030,Walsall,253499,269323,6.24,population_all,West Midlands
+E08000031,Wolverhampton,236582,249470,5.45,population_all,West Midlands
+E08000032,Bradford,467665,522452,11.72,population_all,Yorkshire and The Humber
+E08000033,Calderdale,192405,203826,5.94,population_all,Yorkshire and The Humber
+E08000034,Kirklees,388567,422458,8.72,population_all,Yorkshire and The Humber
+E08000035,Leeds,715402,751485,5.04,population_all,Yorkshire and The Humber
+E08000036,Wakefield,315172,325837,3.38,population_all,Yorkshire and The Humber
+E08000037,Gateshead,191151,200214,4.74,population_all,North East
+E09000001,City of London,6934,7375,6.36,population_all,London
+E09000002,Barking and Dagenham,163944,185911,13.4,population_all,London
+E09000003,Barnet,314564,356386,13.3,population_all,London
+E09000004,Bexley,218307,231997,6.27,population_all,London
+E09000005,Brent,263464,311215,18.12,population_all,London
+E09000006,Bromley,295532,309392,4.69,population_all,London
+E09000007,Camden,198020,220338,11.27,population_all,London
+E09000008,Croydon,330896,363378,9.82,population_all,London
+E09000009,Ealing,300948,338449,12.46,population_all,London
+E09000010,Enfield,273559,312466,14.22,population_all,London
+E09000011,Greenwich,214403,254557,18.73,population_all,London
+E09000012,Hackney,202824,246270,21.42,population_all,London
+E09000013,Hammersmith and Fulham,165242,182493,10.44,population_all,London
+E09000014,Haringey,216507,254926,17.74,population_all,London
+E09000015,Harrow,206814,239056,15.59,population_all,London
+E09000016,Havering,224248,237232,5.79,population_all,London
+E09000017,Hillingdon,243006,273936,12.73,population_all,London
+E09000018,Hounslow,212341,253957,19.6,population_all,London
+E09000019,Islington,176048,206125,17.08,population_all,London
+E09000020,Kensington and Chelsea,158919,158649,-0.17,population_all,London
+E09000021,Kingston upon Thames,147483,160060,8.53,population_all,London
+E09000022,Lambeth,266169,303086,13.87,population_all,London
+E09000023,Lewisham,248922,275885,10.83,population_all,London
+E09000024,Merton,187908,199693,6.27,population_all,London
+E09000025,Newham,243891,307984,26.28,population_all,London
+E09000026,Redbridge,238635,278970,16.9,population_all,London
+E09000027,Richmond upon Thames,172125,186990,8.64,population_all,London
+E09000028,Southwark,244866,288283,17.73,population_all,London
+E09000029,Sutton,179459,190146,5.96,population_all,London
+E09000030,Tower Hamlets,196106,254096,29.57,population_all,London
+E09000031,Waltham Forest,218341,258249,18.28,population_all,London
+E09000032,Wandsworth,260380,306995,17.9,population_all,London
+E09000033,Westminster,181286,219396,21.02,population_all,London
+W06000001,Isle of Anglesey,66829,69751,4.37,population_all,Wales
+W06000002,Gwynedd,116843,121874,4.31,population_all,Wales
+W06000003,Conwy,109596,115228,5.14,population_all,Wales
+W06000004,Denbighshire,93065,93734,0.72,population_all,Wales
+W06000005,Flintshire,148594,152506,2.63,population_all,Wales
+W06000006,Wrexham,128476,134844,4.96,population_all,Wales
+W06000008,Ceredigion,74941,75922,1.31,population_all,Wales
+W06000009,Pembrokeshire,114131,122439,7.28,population_all,Wales
+W06000010,Carmarthenshire,172842,183777,6.33,population_all,Wales
+W06000011,Swansea,223301,239023,7.04,population_all,Wales
+W06000012,Neath Port Talbot,134468,139812,3.97,population_all,Wales
+W06000013,Bridgend,128645,139178,8.19,population_all,Wales
+W06000014,Vale of Glamorgan,119292,126336,5.9,population_all,Wales
+W06000015,Cardiff,305353,346090,13.34,population_all,Wales
+W06000016,Rhondda Cynon Taff,231946,234410,1.06,population_all,Wales
+W06000018,Caerphilly,169519,178806,5.48,population_all,Wales
+W06000019,Blaenau Gwent,70064,69814,-0.36,population_all,Wales
+W06000020,Torfaen,90949,91075,0.14,population_all,Wales
+W06000021,Monmouthshire,84885,91323,7.58,population_all,Wales
+W06000022,Newport,137011,145736,6.37,population_all,Wales
+W06000023,Powys,126354,132976,5.24,population_all,Wales
+W06000024,Merthyr Tydfil,55981,58802,5.04,population_all,Wales
+E06000001,Hartlepool,64.2,75.99,11.79,health_good,North East
+E06000002,Middlesbrough,65.2,78.14,12.94,health_good,North East
+E06000003,Redcar and Cleveland,63.41,76.29,12.88,health_good,North East
+E06000004,Stockton-on-Tees,66.88,79.9,13.02,health_good,North East
+E06000005,Darlington,66.36,79.8,13.44,health_good,North East
+E06000006,Halton,66.52,78.23,11.71,health_good,North West
+E06000007,Warrington,70.59,82.56,11.97,health_good,North West
+E06000008,Blackburn with Darwen,66.65,78.65,12.0,health_good,North West
+E06000009,Blackpool,61.05,73.64,12.59,health_good,North West
+E06000010,"Kingston upon Hull, City of",65.17,78.05,12.88,health_good,Yorkshire and The Humber
+E06000011,East Riding of Yorkshire,68.82,80.16,11.34,health_good,Yorkshire and The Humber
+E06000012,North East Lincolnshire,67.58,79.05,11.47,health_good,Yorkshire and The Humber
+E06000013,North Lincolnshire,66.52,79.5,12.98,health_good,Yorkshire and The Humber
+E06000014,York,70.26,83.87,13.61,health_good,Yorkshire and The Humber
+E06000015,Derby,66.45,79.96,13.51,health_good,East Midlands
+E06000016,Leicester,65.54,80.54,15.0,health_good,East Midlands
+E06000017,Rutland,72.87,84.42,11.55,health_good,East Midlands
+E06000018,Nottingham,64.97,79.94,14.97,health_good,East Midlands
+E06000019,"Herefordshire, County of",68.72,80.86,12.14,health_good,West Midlands
+E06000020,Telford and Wrekin,68.64,80.19,11.55,health_good,West Midlands
+E06000021,Stoke-on-Trent,63.05,76.63,13.58,health_good,West Midlands
+E06000022,Bath and North East Somerset,71.46,83.93,12.47,health_good,South West
+E06000023,"Bristol, City of",68.63,82.27,13.64,health_good,South West
+E06000024,North Somerset,68.98,81.08,12.1,health_good,South West
+E06000025,South Gloucestershire,72.42,84.03,11.61,health_good,South West
+E06000026,Plymouth,66.75,79.54,12.79,health_good,South West
+E06000027,Torbay,63.65,76.14,12.49,health_good,South West
+E06000030,Swindon,70.72,83.44,12.72,health_good,South West
+E06000031,Peterborough,68.59,81.56,12.97,health_good,East
+E06000032,Luton,69.64,82.63,12.99,health_good,East
+E06000033,Southend-on-Sea,66.89,80.2,13.31,health_good,East
+E06000034,Thurrock,70.08,82.94,12.86,health_good,East
+E06000035,Medway,69.81,81.97,12.16,health_good,South East
+E06000036,Bracknell Forest,75.31,86.69,11.38,health_good,South East
+E06000037,West Berkshire,74.86,86.14,11.28,health_good,South East
+E06000038,Reading,72.46,85.47,13.01,health_good,South East
+E06000039,Slough,70.49,83.89,13.4,health_good,South East
+E06000040,Windsor and Maidenhead,75.35,86.73,11.38,health_good,South East
+E06000041,Wokingham,77.58,87.81,10.23,health_good,South East
+E06000042,Milton Keynes,72.46,85.04,12.58,health_good,South East
+E06000043,Brighton and Hove,68.05,82.91,14.86,health_good,South East
+E06000044,Portsmouth,67.87,82.53,14.66,health_good,South East
+E06000045,Southampton,68.31,82.54,14.23,health_good,South East
+E06000046,Isle of Wight,65.06,77.34,12.28,health_good,South East
+E06000047,County Durham,62.62,75.78,13.16,health_good,North East
+E06000049,Cheshire East,70.91,82.31,11.4,health_good,North West
+E06000050,Cheshire West and Chester,70.18,81.53,11.35,health_good,North West
+E06000051,Shropshire,69.37,81.41,12.04,health_good,West Midlands
+E06000052,Cornwall,65.8,78.82,13.02,health_good,South West
+E06000053,Isles of Scilly,73.04,85.75,12.71,health_good,South West
+E06000054,Wiltshire,72.49,83.8,11.31,health_good,South West
+E06000055,Bedford,71.35,82.88,11.53,health_good,East
+E06000056,Central Bedfordshire,73.29,84.67,11.38,health_good,East
+E06000057,Northumberland,65.6,78.3,12.7,health_good,North East
+E06000058,"Bournemouth, Christchurch and Poole",67.03,80.69,13.66,health_good,South West
+E06000059,Dorset,68.6,80.84,12.24,health_good,South West
+E06000060,Buckinghamshire,74.86,85.85,10.99,health_good,South East
+E07000008,Cambridge,74.06,86.66,12.6,health_good,East
+E07000009,East Cambridgeshire,71.39,83.94,12.55,health_good,East
+E07000010,Fenland,65.56,77.28,11.72,health_good,East
+E07000011,Huntingdonshire,73.37,84.45,11.08,health_good,East
+E07000012,South Cambridgeshire,75.07,86.17,11.1,health_good,East
+E07000026,Allerdale,66.55,79.01,12.46,health_good,North West
+E07000027,Barrow-in-Furness,63.12,75.85,12.73,health_good,North West
+E07000028,Carlisle,67.4,80.06,12.66,health_good,North West
+E07000029,Copeland,66.73,78.28,11.55,health_good,North West
+E07000030,Eden,69.71,81.84,12.13,health_good,North West
+E07000031,South Lakeland,69.21,81.85,12.64,health_good,North West
+E07000032,Amber Valley,66.03,79.0,12.97,health_good,East Midlands
+E07000033,Bolsover,59.8,74.28,14.48,health_good,East Midlands
+E07000034,Chesterfield,62.37,76.02,13.65,health_good,East Midlands
+E07000035,Derbyshire Dales,69.06,81.8,12.74,health_good,East Midlands
+E07000036,Erewash,66.7,79.42,12.72,health_good,East Midlands
+E07000037,High Peak,69.23,81.6,12.37,health_good,East Midlands
+E07000038,North East Derbyshire,64.44,77.22,12.78,health_good,East Midlands
+E07000039,South Derbyshire,68.97,82.05,13.08,health_good,East Midlands
+E07000040,East Devon,67.05,79.81,12.76,health_good,South West
+E07000041,Exeter,70.08,83.28,13.2,health_good,South West
+E07000042,Mid Devon,69.54,82.08,12.54,health_good,South West
+E07000043,North Devon,67.85,80.23,12.38,health_good,South West
+E07000044,South Hams,69.71,81.78,12.07,health_good,South West
+E07000045,Teignbridge,67.65,79.83,12.18,health_good,South West
+E07000046,Torridge,65.74,78.37,12.63,health_good,South West
+E07000047,West Devon,68.43,80.58,12.15,health_good,South West
+E07000061,Eastbourne,64.19,78.47,14.28,health_good,South East
+E07000062,Hastings,63.34,76.74,13.4,health_good,South East
+E07000063,Lewes,68.15,80.36,12.21,health_good,South East
+E07000064,Rother,65.19,77.15,11.96,health_good,South East
+E07000065,Wealden,70.55,82.51,11.96,health_good,South East
+E07000066,Basildon,69.51,81.2,11.69,health_good,East
+E07000067,Braintree,71.61,83.2,11.59,health_good,East
+E07000068,Brentwood,72.86,84.35,11.49,health_good,East
+E07000069,Castle Point,69.3,79.61,10.31,health_good,East
+E07000070,Chelmsford,73.92,84.91,10.99,health_good,East
+E07000071,Colchester,71.33,83.66,12.33,health_good,East
+E07000072,Epping Forest,71.75,83.02,11.27,health_good,East
+E07000073,Harlow,68.57,80.97,12.4,health_good,East
+E07000074,Maldon,71.69,81.83,10.14,health_good,East
+E07000075,Rochford,71.13,82.68,11.55,health_good,East
+E07000076,Tendring,62.51,74.24,11.73,health_good,East
+E07000077,Uttlesford,74.77,85.88,11.11,health_good,East
+E07000078,Cheltenham,71.22,84.23,13.01,health_good,South West
+E07000079,Cotswold,72.12,83.86,11.74,health_good,South West
+E07000080,Forest of Dean,67.96,80.06,12.1,health_good,South West
+E07000081,Gloucester,69.24,82.02,12.78,health_good,South West
+E07000082,Stroud,71.0,82.9,11.9,health_good,South West
+E07000083,Tewkesbury,71.83,83.25,11.42,health_good,South West
+E07000084,Basingstoke and Deane,74.32,85.79,11.47,health_good,South East
+E07000085,East Hampshire,74.11,85.15,11.04,health_good,South East
+E07000086,Eastleigh,73.26,84.47,11.21,health_good,South East
+E07000087,Fareham,72.18,83.75,11.57,health_good,South East
+E07000088,Gosport,68.94,81.53,12.59,health_good,South East
+E07000089,Hart,77.24,88.1,10.86,health_good,South East
+E07000090,Havant,67.89,80.17,12.28,health_good,South East
+E07000091,New Forest,69.41,81.02,11.61,health_good,South East
+E07000092,Rushmoor,73.48,85.61,12.13,health_good,South East
+E07000093,Test Valley,73.69,84.61,10.92,health_good,South East
+E07000094,Winchester,74.61,85.98,11.37,health_good,South East
+E07000095,Broxbourne,71.45,83.04,11.59,health_good,East
+E07000096,Dacorum,73.28,84.39,11.11,health_good,East
+E07000098,Hertsmere,73.19,84.42,11.23,health_good,East
+E07000099,North Hertfordshire,72.13,84.3,12.17,health_good,East
+E07000102,Three Rivers,73.58,84.91,11.33,health_good,East
+E07000103,Watford,72.57,84.89,12.32,health_good,East
+E07000105,Ashford,70.2,82.67,12.47,health_good,South East
+E07000106,Canterbury,67.56,81.45,13.89,health_good,South East
+E07000107,Dartford,70.37,83.41,13.04,health_good,South East
+E07000108,Dover,66.38,78.72,12.34,health_good,South East
+E07000109,Gravesham,69.38,81.47,12.09,health_good,South East
+E07000110,Maidstone,71.2,83.16,11.96,health_good,South East
+E07000111,Sevenoaks,72.92,84.55,11.63,health_good,South East
+E07000112,Folkestone and Hythe,66.08,78.33,12.25,health_good,South East
+E07000113,Swale,68.28,80.18,11.9,health_good,South East
+E07000114,Thanet,63.19,75.83,12.64,health_good,South East
+E07000115,Tonbridge and Malling,72.5,84.25,11.75,health_good,South East
+E07000116,Tunbridge Wells,72.93,85.02,12.09,health_good,South East
+E07000117,Burnley,64.79,76.57,11.78,health_good,North West
+E07000118,Chorley,69.1,81.2,12.1,health_good,North West
+E07000119,Fylde,66.74,78.42,11.68,health_good,North West
+E07000120,Hyndburn,64.4,77.25,12.85,health_good,North West
+E07000121,Lancaster,67.37,80.51,13.14,health_good,North West
+E07000122,Pendle,65.3,78.02,12.72,health_good,North West
+E07000123,Preston,67.26,80.68,13.42,health_good,North West
+E07000124,Ribble Valley,71.57,83.65,12.08,health_good,North West
+E07000125,Rossendale,66.92,79.35,12.43,health_good,North West
+E07000126,South Ribble,69.22,81.81,12.59,health_good,North West
+E07000127,West Lancashire,69.06,80.32,11.26,health_good,North West
+E07000128,Wyre,65.32,76.87,11.55,health_good,North West
+E07000129,Blaby,71.31,83.32,12.01,health_good,East Midlands
+E07000130,Charnwood,70.52,83.41,12.89,health_good,East Midlands
+E07000131,Harborough,73.17,85.13,11.96,health_good,East Midlands
+E07000132,Hinckley and Bosworth,69.41,82.1,12.69,health_good,East Midlands
+E07000133,Melton,72.28,83.85,11.57,health_good,East Midlands
+E07000134,North West Leicestershire,67.37,80.97,13.6,health_good,East Midlands
+E07000135,Oadby and Wigston,70.03,81.81,11.78,health_good,East Midlands
+E07000136,Boston,64.64,78.16,13.52,health_good,East Midlands
+E07000137,East Lindsey,62.53,73.52,10.99,health_good,East Midlands
+E07000138,Lincoln,67.19,80.76,13.57,health_good,East Midlands
+E07000139,North Kesteven,69.57,81.1,11.53,health_good,East Midlands
+E07000140,South Holland,64.93,78.08,13.15,health_good,East Midlands
+E07000141,South Kesteven,70.6,81.94,11.34,health_good,East Midlands
+E07000142,West Lindsey,68.27,79.96,11.69,health_good,East Midlands
+E07000143,Breckland,66.98,79.52,12.54,health_good,East
+E07000144,Broadland,68.73,81.29,12.56,health_good,East
+E07000145,Great Yarmouth,63.31,76.31,13.0,health_good,East
+E07000146,King's Lynn and West Norfolk,65.1,77.99,12.89,health_good,East
+E07000147,North Norfolk,63.92,76.69,12.77,health_good,East
+E07000148,Norwich,64.94,80.29,15.35,health_good,East
+E07000149,South Norfolk,68.89,82.15,13.26,health_good,East
+E07000150,Corby,68.14,81.1,12.96,health_good,East Midlands
+E07000151,Daventry,73.47,83.71,10.24,health_good,East Midlands
+E07000152,East Northamptonshire,70.63,82.79,12.16,health_good,East Midlands
+E07000153,Kettering,69.93,82.39,12.46,health_good,East Midlands
+E07000154,Northampton,70.01,82.85,12.84,health_good,East Midlands
+E07000155,South Northamptonshire,74.55,85.58,11.03,health_good,East Midlands
+E07000156,Wellingborough,67.81,80.71,12.9,health_good,East Midlands
+E07000163,Craven,70.13,82.18,12.05,health_good,Yorkshire and The Humber
+E07000164,Hambleton,71.76,83.09,11.33,health_good,Yorkshire and The Humber
+E07000165,Harrogate,72.15,84.4,12.25,health_good,Yorkshire and The Humber
+E07000166,Richmondshire,72.98,84.79,11.81,health_good,Yorkshire and The Humber
+E07000167,Ryedale,69.39,81.22,11.83,health_good,Yorkshire and The Humber
+E07000168,Scarborough,65.44,77.18,11.74,health_good,Yorkshire and The Humber
+E07000169,Selby,70.51,82.66,12.15,health_good,Yorkshire and The Humber
+E07000170,Ashfield,63.13,76.53,13.4,health_good,East Midlands
+E07000171,Bassetlaw,65.3,77.5,12.2,health_good,East Midlands
+E07000172,Broxtowe,68.1,80.47,12.37,health_good,East Midlands
+E07000173,Gedling,68.1,80.22,12.12,health_good,East Midlands
+E07000174,Mansfield,62.74,75.8,13.06,health_good,East Midlands
+E07000175,Newark and Sherwood,67.28,79.41,12.13,health_good,East Midlands
+E07000176,Rushcliffe,72.82,84.51,11.69,health_good,East Midlands
+E07000177,Cherwell,72.98,84.98,12.0,health_good,South East
+E07000178,Oxford,73.07,86.96,13.89,health_good,South East
+E07000179,South Oxfordshire,74.74,85.92,11.18,health_good,South East
+E07000180,Vale of White Horse,74.92,85.84,10.92,health_good,South East
+E07000181,West Oxfordshire,73.79,85.34,11.55,health_good,South East
+E07000187,Mendip,70.06,81.83,11.77,health_good,South West
+E07000188,Sedgemoor,66.81,79.71,12.9,health_good,South West
+E07000189,South Somerset,68.55,81.36,12.81,health_good,South West
+E07000192,Cannock Chase,66.94,78.77,11.83,health_good,West Midlands
+E07000193,East Staffordshire,69.42,81.59,12.17,health_good,West Midlands
+E07000194,Lichfield,70.05,81.7,11.65,health_good,West Midlands
+E07000195,Newcastle-under-Lyme,66.13,79.14,13.01,health_good,West Midlands
+E07000196,South Staffordshire,70.39,80.85,10.46,health_good,West Midlands
+E07000197,Stafford,69.57,81.72,12.15,health_good,West Midlands
+E07000198,Staffordshire Moorlands,67.53,79.22,11.69,health_good,West Midlands
+E07000199,Tamworth,69.13,80.84,11.71,health_good,West Midlands
+E07000200,Babergh,70.44,82.41,11.97,health_good,East
+E07000202,Ipswich,68.11,81.4,13.29,health_good,East
+E07000203,Mid Suffolk,71.48,83.19,11.71,health_good,East
+E07000207,Elmbridge,76.23,87.44,11.21,health_good,South East
+E07000208,Epsom and Ewell,73.77,85.97,12.2,health_good,South East
+E07000209,Guildford,75.17,87.05,11.88,health_good,South East
+E07000210,Mole Valley,74.18,85.19,11.01,health_good,South East
+E07000211,Reigate and Banstead,73.75,85.58,11.83,health_good,South East
+E07000212,Runnymede,73.68,85.42,11.74,health_good,South East
+E07000213,Spelthorne,72.52,83.86,11.34,health_good,South East
+E07000214,Surrey Heath,76.73,86.77,10.04,health_good,South East
+E07000215,Tandridge,73.63,84.86,11.23,health_good,South East
+E07000216,Waverley,74.51,86.24,11.73,health_good,South East
+E07000217,Woking,74.42,86.34,11.92,health_good,South East
+E07000218,North Warwickshire,67.85,79.95,12.1,health_good,West Midlands
+E07000219,Nuneaton and Bedworth,67.38,79.31,11.93,health_good,West Midlands
+E07000220,Rugby,70.32,82.95,12.63,health_good,West Midlands
+E07000221,Stratford-on-Avon,71.5,83.05,11.55,health_good,West Midlands
+E07000222,Warwick,71.64,84.55,12.91,health_good,West Midlands
+E07000223,Adur,66.66,79.24,12.58,health_good,South East
+E07000224,Arun,65.56,78.75,13.19,health_good,South East
+E07000225,Chichester,70.4,82.59,12.19,health_good,South East
+E07000226,Crawley,71.21,83.52,12.31,health_good,South East
+E07000227,Horsham,74.17,85.37,11.2,health_good,South East
+E07000228,Mid Sussex,74.41,85.78,11.37,health_good,South East
+E07000229,Worthing,66.27,80.32,14.05,health_good,South East
+E07000234,Bromsgrove,71.06,82.49,11.43,health_good,West Midlands
+E07000235,Malvern Hills,69.1,80.64,11.54,health_good,West Midlands
+E07000236,Redditch,70.15,81.63,11.48,health_good,West Midlands
+E07000237,Worcester,69.92,82.36,12.44,health_good,West Midlands
+E07000238,Wychavon,70.42,81.96,11.54,health_good,West Midlands
+E07000239,Wyre Forest,67.46,78.81,11.35,health_good,West Midlands
+E07000240,St Albans,75.48,86.98,11.5,health_good,East
+E07000241,Welwyn Hatfield,71.18,84.81,13.63,health_good,East
+E07000242,East Hertfordshire,75.17,86.23,11.06,health_good,East
+E07000243,Stevenage,70.95,82.74,11.79,health_good,East
+E07000244,East Suffolk,67.48,79.64,12.16,health_good,East
+E07000245,West Suffolk,71.49,83.24,11.75,health_good,East
+E07000246,Somerset West and Taunton,67.85,80.53,12.68,health_good,South West
+E08000001,Bolton,67.04,79.24,12.2,health_good,North West
+E08000002,Bury,67.8,80.39,12.59,health_good,North West
+E08000003,Manchester,64.58,80.45,15.87,health_good,North West
+E08000004,Oldham,65.69,78.49,12.8,health_good,North West
+E08000005,Rochdale,66.1,77.65,11.55,health_good,North West
+E08000006,Salford,64.67,78.39,13.72,health_good,North West
+E08000007,Stockport,69.23,81.11,11.88,health_good,North West
+E08000008,Tameside,65.22,77.66,12.44,health_good,North West
+E08000009,Trafford,69.85,82.62,12.77,health_good,North West
+E08000010,Wigan,65.49,78.09,12.6,health_good,North West
+E08000011,Knowsley,65.03,75.85,10.82,health_good,North West
+E08000012,Liverpool,64.47,77.21,12.74,health_good,North West
+E08000013,St. Helens,64.82,76.78,11.96,health_good,North West
+E08000014,Sefton,67.02,77.86,10.84,health_good,North West
+E08000015,Wirral,66.88,78.21,11.33,health_good,North West
+E08000016,Barnsley,61.31,75.18,13.87,health_good,Yorkshire and The Humber
+E08000017,Doncaster,64.54,77.62,13.08,health_good,Yorkshire and The Humber
+E08000018,Rotherham,64.48,77.14,12.66,health_good,Yorkshire and The Humber
+E08000019,Sheffield,65.23,80.08,14.85,health_good,Yorkshire and The Humber
+E08000021,Newcastle upon Tyne,65.08,79.6,14.52,health_good,North East
+E08000022,North Tyneside,64.93,78.18,13.25,health_good,North East
+E08000023,South Tyneside,63.9,75.75,11.85,health_good,North East
+E08000024,Sunderland,63.92,75.47,11.55,health_good,North East
+E08000025,Birmingham,65.66,79.44,13.78,health_good,West Midlands
+E08000026,Coventry,67.41,80.69,13.28,health_good,West Midlands
+E08000027,Dudley,65.8,78.21,12.41,health_good,West Midlands
+E08000028,Sandwell,62.65,76.69,14.04,health_good,West Midlands
+E08000029,Solihull,70.89,81.71,10.82,health_good,West Midlands
+E08000030,Walsall,64.74,77.3,12.56,health_good,West Midlands
+E08000031,Wolverhampton,63.56,77.14,13.58,health_good,West Midlands
+E08000032,Bradford,67.27,80.42,13.15,health_good,Yorkshire and The Humber
+E08000033,Calderdale,67.64,80.68,13.04,health_good,Yorkshire and The Humber
+E08000034,Kirklees,67.71,80.5,12.79,health_good,Yorkshire and The Humber
+E08000035,Leeds,68.31,81.88,13.57,health_good,Yorkshire and The Humber
+E08000036,Wakefield,64.6,76.79,12.19,health_good,Yorkshire and The Humber
+E08000037,Gateshead,62.58,76.48,13.9,health_good,North East
+E09000001,City of London,74.01,87.95,13.94,health_good,London
+E09000002,Barking and Dagenham,65.49,80.97,15.48,health_good,London
+E09000003,Barnet,72.5,84.45,11.95,health_good,London
+E09000004,Bexley,70.32,82.66,12.34,health_good,London
+E09000005,Brent,70.04,82.86,12.82,health_good,London
+E09000006,Bromley,72.45,84.22,11.77,health_good,London
+E09000007,Camden,71.27,83.97,12.7,health_good,London
+E09000008,Croydon,70.71,83.44,12.73,health_good,London
+E09000009,Ealing,71.07,83.65,12.58,health_good,London
+E09000010,Enfield,69.55,81.85,12.3,health_good,London
+E09000011,Greenwich,68.35,83.09,14.74,health_good,London
+E09000012,Hackney,68.36,82.89,14.53,health_good,London
+E09000013,Hammersmith and Fulham,72.99,85.71,12.72,health_good,London
+E09000014,Haringey,70.16,83.18,13.02,health_good,London
+E09000015,Harrow,72.11,83.58,11.47,health_good,London
+E09000016,Havering,69.72,81.57,11.85,health_good,London
+E09000017,Hillingdon,71.34,84.06,12.72,health_good,London
+E09000018,Hounslow,70.91,84.07,13.16,health_good,London
+E09000019,Islington,68.0,82.36,14.36,health_good,London
+E09000020,Kensington and Chelsea,75.18,86.32,11.14,health_good,London
+E09000021,Kingston upon Thames,73.91,86.17,12.26,health_good,London
+E09000022,Lambeth,71.57,85.0,13.43,health_good,London
+E09000023,Lewisham,69.18,83.11,13.93,health_good,London
+E09000024,Merton,72.69,85.63,12.94,health_good,London
+E09000025,Newham,67.95,83.06,15.11,health_good,London
+E09000026,Redbridge,69.76,83.1,13.34,health_good,London
+E09000027,Richmond upon Thames,76.34,87.87,11.53,health_good,London
+E09000028,Southwark,70.3,84.71,14.41,health_good,London
+E09000029,Sutton,71.54,84.27,12.73,health_good,London
+E09000030,Tower Hamlets,67.89,83.31,15.42,health_good,London
+E09000031,Waltham Forest,68.6,82.71,14.11,health_good,London
+E09000032,Wandsworth,74.58,87.34,12.76,health_good,London
+E09000033,Westminster,72.39,84.15,11.76,health_good,London
+W06000001,Isle of Anglesey,67.37,78.57,11.2,health_good,Wales
+W06000002,Gwynedd,69.25,81.05,11.8,health_good,Wales
+W06000003,Conwy,65.19,77.51,12.32,health_good,Wales
+W06000004,Denbighshire,66.0,78.0,12.0,health_good,Wales
+W06000005,Flintshire,69.64,81.12,11.48,health_good,Wales
+W06000006,Wrexham,66.98,79.69,12.71,health_good,Wales
+W06000008,Ceredigion,66.96,79.25,12.29,health_good,Wales
+W06000009,Pembrokeshire,65.64,77.94,12.3,health_good,Wales
+W06000010,Carmarthenshire,62.41,75.23,12.82,health_good,Wales
+W06000011,Swansea,64.59,77.93,13.34,health_good,Wales
+W06000012,Neath Port Talbot,59.69,73.34,13.65,health_good,Wales
+W06000013,Bridgend,63.52,76.01,12.49,health_good,Wales
+W06000014,Vale of Glamorgan,68.28,80.06,11.78,health_good,Wales
+W06000015,Cardiff,69.03,81.43,12.4,health_good,Wales
+W06000016,Rhondda Cynon Taff,61.04,74.53,13.49,health_good,Wales
+W06000018,Caerphilly,61.58,74.75,13.17,health_good,Wales
+W06000019,Blaenau Gwent,59.28,72.56,13.28,health_good,Wales
+W06000020,Torfaen,62.16,75.78,13.62,health_good,Wales
+W06000021,Monmouthshire,68.64,80.05,11.41,health_good,Wales
+W06000022,Newport,65.4,78.55,13.15,health_good,Wales
+W06000023,Powys,66.76,78.94,12.18,health_good,Wales
+W06000024,Merthyr Tydfil,58.63,72.97,14.34,health_good,Wales

@@ -1,7 +1,33 @@
 <script>
-    import { bullGenerator } from './robo_utils.js';
+    import { bullGenerator } from './robo_bullet.js';
 
-    export let place;
+	export let place;
+	
+    // Find the highest rank that is change
+	let bullDataSelect = [];
+    for (let i=0; i<40; i++) {
+        if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" != place['Priorities'][i]['label'].split("_")[3] & "male" != place['Priorities'][i]['label'].split("_")[3]) {
+            // Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
+            if (place['Priorities'][i]['label'].split("_")[0] == "age10yr" | place['Priorities'][i]['label'].split("_")[0] == "travel" | place['Priorities'][i]['label'].split("_")[0] == "tenure" | place['Priorities'][i]['label'].split("_")[0] == "density") {
+                place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 5;
+            }
+            bullDataSelect.push(place['Priorities'][i])
+        }
+    }
+    bullDataSelect.sort(function(a, b) {
+        // Reorder the objects
+        if (a.sqrt < b.sqrt) return -1;
+        if (a.sqrt > b.sqrt) return 1;
+        return 0;
+    });
+    bullDataSelect.sort(function(a, b) {
+        // Select the highest abVal for equal change ranks
+        if (a.sqrt == b.sqrt) {
+            if (a.abVal < b.abVal) return 1;
+            if (a.abVal > b.abVal) return -1;
+        }
+        return 0;
+    });
 
 </script>
 
@@ -12,30 +38,15 @@
 
     <div>
         <h1>{place.name}</h1>
-    </div>
+	</div>
+	
+	{#each bullGenerator(place, bullDataSelect, 0, 6) as bullet}
 
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 0], 0)}</p>
-    </div>
-    
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 1], 1)}</p>
-    </div>
-    
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 2], 2)}</p>
-    </div>
-    
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 3], 3)}</p>
-    </div>
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 4], 4)}</p>
-    </div>
-    
-    <div>
-        <p>{bullGenerator(place, ["Priorities", 5], 5)}</p>
-    </div>
+		<div>
+			<p>{bullet.sent}</p>
+		</div> 
+
+	{/each}
     
 </div>
 

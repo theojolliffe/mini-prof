@@ -1,21 +1,24 @@
 <script>
-    import { sentGenerator, headGenerator } from './robo_utils.js';
+    import { headGenerator } from './robo_headline.js';
     import robojournalist from "robojournalist";
-    import { adjectify, uncap1, regionThe, ordinal_suffix_of } from './robo_utils_pure_functions.js';
+	import { adjectify, uncap1, regionThe, ordinal_suffix_of } from './robo_utils_pure_functions.js';
+	
+	import Item from './Item.svelte'
+
     export let place;
 
     let breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
 
 </script>
 
-<h3>Largely text-based reports (with simple embedded charts) for when data is released.</h3>
-
 <div class="section-2">
 
     <div>
         <h1>{headGenerator(place)[0]}</h1>
         <h4>{headGenerator(place)[1]}</h4>
-    </div>
+	</div>
+	
+	<Item place={place} entry={place.name+" at a glance"}/>
     
     <div>
         <p>
@@ -165,6 +168,9 @@
 		margin-bottom: 100px;
 	}
 	.section-2 > div {
-		margin-top: 60px;
+		margin-top: 30px;
+	}
+	h1:first-letter {
+		text-transform: capitalize;
 	}
 	</style>

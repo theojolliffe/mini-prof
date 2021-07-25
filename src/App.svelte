@@ -12,6 +12,7 @@
 	import { Tabs, TabList, TabPanel, Tab } from './tabs.js';
 	import CHUNKS from './CHUNKS.svelte';
 	import REPORT from './REPORT.svelte';
+	import REPORT2 from './REPORT2.svelte';
 	import BULLET from './BULLET.svelte';
 
 
@@ -233,13 +234,18 @@
 
 <Tabs>
 	<TabList>
-		<Tab>1. Area Profiles</Tab>
-		<Tab>2. Reports</Tab>
-		<Tab>3. Bullet points</Tab>
+		<Tab>1. Area Report</Tab>
+		<Tab>2. Area Profiles</Tab>
+		<Tab>3. Reports</Tab>
+		<Tab>4. Bullet points</Tab>
 	</TabList>
 
 	<TabPanel>
-		<CHUNKS place={place} quartiles={quartiles} ew={ew}></CHUNKS>
+		<REPORT2 place={place} ew={ew} quartiles={quartiles}></REPORT2>
+	</TabPanel>
+
+	<TabPanel>
+		<CHUNKS place={place} ew={ew} quartiles={quartiles}></CHUNKS>
 	</TabPanel>
 
 	<TabPanel>

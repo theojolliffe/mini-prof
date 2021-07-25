@@ -1,5 +1,6 @@
 <script>
-    import { sentGenerator, introPara } from './robo_utils.js';
+    import { sentGenerator } from './robo_utils.js';
+    import { introPara } from './robo_intro.js';
     import ColChart from "./chart/ColChart.svelte";
 	import SpineChart from "./chart/SpineChart.svelte";
     import GridChart from "./chart/GridChart.svelte";
