@@ -285,6 +285,8 @@
 	:global(body) {
 		font-family: 'Open Sans', sans-serif;
 		padding: 20px;
+		font-size: x-large;
+		line-height: 2;
 	}
 	a {
 		color: rgb(0, 60, 87);
@@ -347,7 +349,6 @@
 			grid-column: span 1;
 		}
 	}
-
 	.profile-grid {
 		display: grid;
 		width: 70%;

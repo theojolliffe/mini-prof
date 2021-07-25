@@ -228,7 +228,7 @@
 		text-transform: capitalize
 	}
 	.section-head {
-		font-size:1.6rem
+		font-size:2.8rem
 	}
 	</style>
 
