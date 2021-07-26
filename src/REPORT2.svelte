@@ -15,15 +15,22 @@
 	// Transform robo string csv to object
 	let roboStrings = {};
 	strings.forEach(d => {roboStrings[d.varCode] = d.template;});
+
+	let topicList = ["age10yr", "travel", "tenure", "density"] 
+	let subjectList = ["bus"] 
 	
-	function priorities(place, sect) {
+	function priorities(place) {
     // Filter ranks to only include change ranks
 	let dataSelect = [];
     for (let i=0; i<50; i++) {
         if ("change" == place['Priorities'][i]['label'].split("_")[2] & "female" != place['Priorities'][i]['label'].split("_")[3] & "male" != place['Priorities'][i]['label'].split("_")[3]) {
             // Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
-            if (place['Priorities'][i]['label'].split("_")[0] == "age10yr" | place['Priorities'][i]['label'].split("_")[0] == "travel" | place['Priorities'][i]['label'].split("_")[0] == "tenure" | place['Priorities'][i]['label'].split("_")[0] == "density") {
-                place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 5;
+            if (topicList.includes(place['Priorities'][i]['label'].split("_")[0])) {
+                place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 1;
+			}
+			// Less interested in these groups, this will be expanded into a more general rule for prioritising certain topics
+			if (subjectList.includes(place['Priorities'][i]['label'].split("_")[3])) {
+                place['Priorities'][i].sqrt = place['Priorities'][i].sqrt + 1;
             }
             dataSelect.push(place['Priorities'][i])
         }
@@ -43,44 +50,44 @@
 		return 0;
 	});
 
-	console.log("pridataSelect", dataSelect)
-
-	return dataSelect[sect]
+	return dataSelect
 }
-
+let data1 = priorities(place)[0]
+let data2 = priorities(place)[1]
+console.log("priorities(place)", priorities(place))
 
 </script>
 
 <div class="section-2">
 
     <div>
-        <h1>{headGenerator(place, priorities(place, 0))[0]}</h1>
-        <h4>{reportGenerator(place, priorities(place, 0), 0, ew)[0]}</h4>
+        <h1>{headGenerator(place, data1)[0]}</h1>
+        <h4>{reportGenerator(place, data1, 0, ew)[0]}</h4>
 	</div>
 	    
     <div>
         <p>
-            {reportGenerator(place, priorities(place, 0), 0, ew)[1]}
+            {reportGenerator(place, data1, 0, ew)[1]}
         </p>
 		<p>
-            {reportGenerator(place, priorities(place, 0), 0, ew)[2]}
+            {reportGenerator(place, data1, 0, ew)[2]}
 		</p>        
 		<p>
-            {reportGenerator(place, priorities(place, 0), 0, ew)[3]}
+            {reportGenerator(place, data1, 0, ew)[3]}
 		</p>     
-		{#if reportGenerator(place, priorities(place, 0), 0, ew)[4]}   
+		{#if reportGenerator(place, data1, 0, ew)[4]}   
 			<p>
-				{reportGenerator(place, priorities(place, 0), 0, ew)[4]}
+				{reportGenerator(place, data1, 0, ew)[4]}
 			</p> 
 		{/if}
 		<p>
-            {reportGenerator(place, priorities(place, 0), 0, ew)[5]}
+            {reportGenerator(place, data1, 0, ew)[5]}
 		</p> 
 
 	</div>
-	
     <div style="margin-top: 50px; margin-bottom: 50px; width: 80%">
         <span class="text-label">Population</span>
+        <span>This chart is a placeholder</span>
         <br/>
         <span class="text-big">{place.data.population.value['2011'].all.toLocaleString()}</span>
         <span class="text-change" class:increase="{place.data.population.value.change.all > 0}">{place.data.population.value.change.all}%</span>
@@ -94,29 +101,29 @@
         {/if}
 	</div>
 	<div>
-        <p class="section-head">{headGenerator(place, priorities(place, 1))[0]}</p>
+        <p class="section-head">{headGenerator(place, data2)[0]}</p>
 	</div>
 	    
     <div>
 		<p>
-			{reportGenerator(place, priorities(place, 1), 1, ew)[0]}
+			{reportGenerator(place, data2, 1, ew)[0]}
 		</p>
         <p>
-            {reportGenerator(place, priorities(place, 1), 1, ew)[1]}
+            {reportGenerator(place, data2, 1, ew)[1]}
         </p>
 		<p>
-            {reportGenerator(place, priorities(place, 1), 1, ew)[2]}
+            {reportGenerator(place, data2, 1, ew)[2]}
 		</p>        
 		<p>
-            {reportGenerator(place, priorities(place, 1), 1, ew)[3]}
+            {reportGenerator(place, data2, 1, ew)[3]}
 		</p>        
-		{#if reportGenerator(place, priorities(place, 1), 1, ew)[4]}
+		{#if reportGenerator(place, data2, 1, ew)[4]}
 			<p>
-				{reportGenerator(place, priorities(place, 1), 1, ew)[4]}
+				{reportGenerator(place, data2, 1, ew)[4]}
 			</p>
 		{/if}
 		<p>
-            {reportGenerator(place, priorities(place, 1), 1, ew)[5]}
+            {reportGenerator(place, data2, 1, ew)[5]}
 		</p> 
         
        

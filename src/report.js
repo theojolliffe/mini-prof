@@ -5,7 +5,6 @@ import variableChange from './data/populationChange.csv';
 import ladLookup from './data/censusAreaLookup.csv';
 import subGroupLookup from './data/subGroupLookup.js';
 import topicLookup from './data/topicLookup.js';
-import { sentGenerator } from "./robo_utils.js";
 
 // Transform lad lookup csv to object
 let ladType = {};
@@ -22,11 +21,13 @@ let gssLookupShort = {"E09": "borough", "E08": "district", "E07": "district", "E
 function overTake(place, selectors) {
     let var01 = place['data'][selectors[0]][selectors[1]][2001][selectors[3]]
     let var11 = place['data'][selectors[0]][selectors[1]][2011][selectors[3]]
+    console.log("var11", var11)
     let variableFilter = variableChange.filter( item => {
-        return item["2001"] > var01 && 
-               item["2011"] < var11 &&
-               item["topic"] == selectors[0]+"_"+selectors[3]
+        return  item["2001"] > var01 &&
+                item["2011"] < var11 && 
+                item["topic"] == selectors[0]+"_"+selectors[3]
     });
+    console.log("variableFilter", variableFilter)
     if (variableFilter.length > 10) {
         return variableFilter.length + " areas"
     } else if (variableFilter.length > 3) {
@@ -34,9 +35,8 @@ function overTake(place, selectors) {
     } else if (variableFilter.length == 3) {
         return variableFilter[0].lad + ", " + variableFilter[1].lad + " and " + variableFilter[2].lad; 
     } else {
-        return variableFilter[0].lad + (variableFilter[1]?" and " + variableFilter[1].lad:"") 
+        return variableFilter[0].lad + (variableFilter[1]?" and " + variableFilter[1].lad:"")
     }
-    
 }
 
 //  Finds next highest district within region, should adapt to make it find one higher if spotlight not top rank
@@ -56,9 +56,9 @@ function nextHighest(place, selectors) {
 function topBelow(place, selectors, natRank) {
     if (natRank>1) {
         let variableFilter = variableChange.filter( item => {
-            return item["change"] > place.data[selectors[0]][selectors[1]]['change'][selectors[3]] &&
-                   item["topic"] == selectors[0]+"_"+selectors[3]
+            return  item["topic"] == selectors[0]+"_"+selectors[3]
         });
+        console.log("*** variableFilter", selectors[0]+"_"+selectors[3])
         variableFilter.sort(function(a, b) {
             return Math.abs(b['change']) - Math.abs(a['change']);
         });    
@@ -81,7 +81,7 @@ function nationComp(place, breaks, natRank, selectors) {
         return " is growing faster here than any other " + gssLookupShort[place.code.slice(0,3)]
     }
     if (natRank<4) {
-        return " here is the " + ordinal_suffix_of(Math.abs(natRank)) + " fastest growing of any " + gssLookupShort[place.code.slice(0,3)]
+        return " the " + ordinal_suffix_of(Math.abs(natRank)) + " fastest growing of any " + gssLookupShort[place.code.slice(0,3)]
     }
     else {
         return " is growing " + adjectify(place['data'][selectors[0]][selectors[1]+'_rank'][selectors[2]][selectors[3]], ['faster here', 'slower here'], breaks) + " the average"
@@ -131,6 +131,7 @@ function fracPerc(place, selectors) {
 }
 
 let perc;
+let pos;
 
 function dec(num) {
     return Math.round(num * 10)/10 
@@ -140,8 +141,12 @@ function reportGenerator(place, dataSelect, sect, ew) {
 
     let breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
     let selectors = dataSelect['label'].split("_")
+    if (selectors[4]) {
+        selectors[3] = selectors[3] + "_" + selectors[4];
+    }
     perc = selectors[1]=="perc"?true:false;
-    let keyWord = dataSelect.label.split("_")[0] + "_" + dataSelect.label.split("_")[3];
+    pos = place.data[selectors[0]][selectors[1]][selectors[2]][selectors[3]]>0? true:false;
+    let keyWord = selectors[0] + "_" + selectors[3];
     let locRank = place['data'][selectors[0]][selectors[1]+'_rank_local'][selectors[2]][selectors[3]]
     let natRank = place['data'][selectors[0]][selectors[1]+'_rank'][selectors[2]][selectors[3]]
     let natRankTot = place['data'][selectors[0]][selectors[1]+'_rank'][2011][selectors[3]]

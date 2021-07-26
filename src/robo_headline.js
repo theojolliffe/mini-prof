@@ -10,7 +10,12 @@ strings.forEach(d => {roboStrings[d.varCode] = d.template;});
 // This function creates a headline a subheading 
 function headGenerator(place, dataSelect) {
 
-    let keyWord = dataSelect.label.split("_")[0] + "_" + dataSelect.label.split("_")[3];
+    let selectors = dataSelect.label.split("_")
+    if (selectors[4]) {
+        selectors[3] = selectors[3] + "_"+selectors[4]
+        selectors[4] = null
+    }
+    let keyWord = selectors[0] + "_" + selectors[3];
     let topic = topicLookup[keyWord][dataSelect.abVal>0?'positive':'negative'];
 
     let roboSentence1 = robojournalist(roboStrings["headline_"+topic[0]], {

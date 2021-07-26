@@ -1,4 +1,18 @@
 export default{
+    travel_car_van: {
+        positive: [
+            1, "CARVAN"
+        ], 
+        negative: [
+            1, "CARVAN"
+        ]},
+    'age10yr_30-39': {
+            positive: [
+                1, "Age 30"
+            ], 
+            negative: [
+                1, "Age 30"
+            ]},
     population_all: {
         positive: [
             2, "population", "resident population", "populous", "headcount", "density"
