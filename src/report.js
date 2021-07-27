@@ -56,7 +56,8 @@ function nextHighest(place, selectors) {
 function topBelow(place, selectors, natRank) {
     if (natRank>1) {
         let variableFilter = variableChange.filter( item => {
-            return  item["topic"] == selectors[0]+"_"+selectors[3]
+            return  item["change"] > place.data[selectors[0]][selectors[1]]['change'][selectors[3]] &&
+            item["topic"] == selectors[0]+"_"+selectors[3]
         });
         console.log("*** variableFilter", selectors[0]+"_"+selectors[3])
         variableFilter.sort(function(a, b) {
@@ -132,15 +133,23 @@ function fracPerc(place, selectors) {
 
 let perc;
 let pos;
+let breaks;
+let selectors;
 
+function sig(place, subject) {
+    let sig = ( place['data'][selectors[0]][selectors[1]+'_rank'][2011][subject]<breaks[2]|
+                place['data'][selectors[0]][selectors[1]+'_rank'][2011][subject]>breaks[8])?
+                adjectify(place['data'][selectors[0]][selectors[1]+'_rank'][2011][subject], ['higher', 'lower'], breaks):""
+    return sig 
+}
 function dec(num) {
     return Math.round(num * 10)/10 
 }
 // Creates sentences for first report section
 function reportGenerator(place, dataSelect, sect, ew) {
 
-    let breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
-    let selectors = dataSelect['label'].split("_")
+    breaks = []; for (let i=0; i<10; i++) {breaks.push(Math.round((i * ((place.type=="wd")?8056:336)) / 10))}
+    selectors = dataSelect['label'].split("_")
     if (selectors[4]) {
         selectors[3] = selectors[3] + "_" + selectors[4];
     }
@@ -151,31 +160,34 @@ function reportGenerator(place, dataSelect, sect, ew) {
     let natRank = place['data'][selectors[0]][selectors[1]+'_rank'][selectors[2]][selectors[3]]
     let natRankTot = place['data'][selectors[0]][selectors[1]+'_rank'][2011][selectors[3]]
 
-    let topic = topicLookup[keyWord][dataSelect.abVal>0?'positive':'negative'];
+    let topic = topicLookup[keyWord];
 
-    let sentence1 = robojournalist(roboStrings["first_"+topic[0]], {
-        topicLong: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][2],
-        topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][1],
+    let sentence1 = robojournalist(roboStrings["first_"+topic['id']], {
+        topicLong: topic['topicLong'],
+        topic: topic['topic'],
         ladName: place.name, 
         shortType: gssLookupShort[place.code.slice(0,3)],
         percChange: dec(place.data[selectors[0]][selectors[1]][selectors[2]][selectors[3]]), 
         accord: sect==0?", according to the 2021 census":"",
+        sinceA: sect==1? "Since 2011, ":"",
+        sinceB: sect==0? " in the ten years following 2011":"",
     })
     if (sect==1) {
         let sentence1a = robojournalist("The 2021 Census also appears to show a significant shift in the local population's well-being.", {
             type: gssLookupShort[place.code.slice(0,3)],
             top: topBelow(place, selectors, natRank),
-            topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][2]
+            topic: topic['topicLong'],
         })
         sentence1 = sentence1a + " " + sentence1
     }
 
-    let sentence2 = robojournalist(roboStrings["second_"+topic[0]], {
+    let sentence2 = robojournalist(roboStrings["second_"+topic['id']], {
         ladName: place.name,
-        topicLong: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][2],
-        topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][1], 
+        topicLong: topic['topicLong'],
+        topic: topic['topic'],        
+        synonym: topic['synonym'],        
         fasterSlower: nationComp(place, breaks, natRank, selectors),
-        localComp: natRank==1?"":robojournalist(" and the {ordinalSuffix} fastest growing in {parent}", {
+        localComp: natRank==1?"":robojournalist(" and is the {ordinalSuffix} fastest growing in {parent}", {
             ordinalSuffix: ordinal_suffix_of(Math.abs(locRank)),
             parent: uncap1(robojournalist('{place ^regionThe}', { 
                 place: place.parents[0].name, regionThe 
@@ -183,10 +195,10 @@ function reportGenerator(place, dataSelect, sect, ew) {
         })
     })
     if (natRank<4) {
-        let sentence2b = robojournalist(natRank==1?"The next fastest growing {top}.":"Across all {type}s, only {top} a faster growing {topic}.", {
+        let sentence2b = robojournalist(natRank==1?"The next fastest growing is {top}.":"Across all {type}s, only {top} a faster growing {topicLong}.", {
             type: gssLookupShort[place.code.slice(0,3)],
             top: topBelow(place, selectors, natRank),
-            topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][2]
+            topicLong: topic['topicLong'],
         })
         sentence2 = sentence2 + " " + sentence2b
     }
@@ -196,37 +208,44 @@ function reportGenerator(place, dataSelect, sect, ew) {
         natRank: ordinal_suffix_of(natRankTot),
         placeType: sect==0?subGroupLookup[ladType[place.code]]:gssLookup[place.code.slice(0,3)],
         overTake: overTake(place, selectors),
-        topicAdj: topic[3],
+        topicAdj: topic['adjective'],
         outOf: natRankTot>15?" out of 336 districts":"district",
         tenYears: sect==1?"In the decade to 2021":"Between 2011 and 2021",
         adject: natRankTot<10?"":robojournalist("This means {ladName} remains {moreLess} the average district.", {
-            moreLess: adjectify(place['data'][selectors[0]][selectors[1]+'_rank'][2011][selectors[3]], ['more '+ topic[3], 'less '+ topic[3]], breaks),
+            moreLess: adjectify(place['data'][selectors[0]][selectors[1]+'_rank'][2011][selectors[3]], ['more '+ topic['adjective'], 'less '+ topic['adjective']], breaks),
             ladName: place.name,
         })
     })
 
-    let sentence4 = robojournalist(roboStrings["fourth_"+topic[0]], {
-        popChange: (place.data.population.value['2011'].all - place.data.population.value['2001'].all).toLocaleString(),
-        pop: place.data.population.value['2011'].all.toLocaleString(),
-        shortType: gssLookupShort[place.code.slice(0,3)],
+    let sentence4 = robojournalist(roboStrings["fourth_"+topic['id']], {...{
         localRank11: ordinal_suffix_of(place['data'][selectors[0]][selectors[1]+'_rank_local']['2011'][selectors[3]]),
-        topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][1],
-        topicSyn: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][4],
+        topic: topic['topic'],
+        topicSyn: topic['synonym'],
         parent: uncap1(robojournalist('{place ^regionThe}', { place: place.parents[0].name, regionThe })),
-        absVal: place.data[selectors[0]].value['2011'][selectors[3]].toLocaleString(), 
-        percVal: selectors[1]=='perc'?dec(place.data[selectors[0]].perc['2011'][selectors[3]]).toLocaleString():"", 
-        fracPerc: selectors[1]=='perc'?fracPerc(place, selectors)[0]:"",
-        fracVar: selectors[1]=='perc'?fracPerc(place, selectors)[1][1][0]:"",
-        percVal2: selectors[1]=='perc'?fracPerc(place, selectors)[1][2][1]:"",
-        percVar2: selectors[1]=='perc'?fracPerc(place, selectors)[1][2][0]:"",
-    })
-    let sentence5 = robojournalist(roboStrings["fifth_"+topic[0]], {
+        absVal: place.data[selectors[0]].value['2011'][selectors[3]].toLocaleString()
+    },
+        ... perc? {
+        adject: topic['adjective'],
+        percVal: dec(place.data[selectors[0]].perc['2011'][selectors[3]]).toLocaleString(), 
+        fracPerc: fracPerc(place, selectors)[0],
+        fracVar: fracPerc(place, selectors)[1][1][0],
+        percVal2: fracPerc(place, selectors)[1][2][1],
+        percVar2: fracPerc(place, selectors)[1][2][0],
+        sig: sig(place, fracPerc(place, selectors)[1][1][0]).length>5?" (" + sig(place, fracPerc(place, selectors)[1][1][0]) + ") ":"",
+        sig2: "; " + sig(place, fracPerc(place, selectors)[1][2][0]) + " average",
+    }:{
+        popChange: (place.data.population.value['2011'].all - place.data.population.value['2001'].all).toLocaleString(),
+        shortType: gssLookupShort[place.code.slice(0,3)],
+        pop: place.data.population.value['2011'].all.toLocaleString(),
+    }})
+    
+    let sentence5 = robojournalist(roboStrings["fifth_"+topic['id']], {
         nextHighest: nextHighest(place, selectors).lad,
         shortType: gssLookupShort[place.code.slice(0,3)],
-        topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][1],
+        topic: topic['topic'],
         nextPop: (dec(Math.abs(nextHighest(place, selectors)['2011']))).toLocaleString(),
         parent: uncap1(robojournalist('{place ^regionThe}', { place: place.parents[0].name, regionThe })),
-        topicAdj: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][3],
+        topicAdj: topic['adjective'],
         behind: place['data'][selectors[0]][selectors[1]+'_rank_local']['2011'][selectors[3]]==1?"": "Manchester is behind Liverpool, with 85% of residents in good health, while ",
     })
     if ((sentence1+sentence5).length<250) {
@@ -234,28 +253,37 @@ function reportGenerator(place, dataSelect, sect, ew) {
         sentence5 = null
     }
 
-    let sentence6 = robojournalist(roboStrings["sixth_"+topic[0]], {
-        lad: place.name,
-        alt: topic[5]?topicLookup[topic[5]][dataSelect.abVal>0?'positive':'negative'][1]:"",
-        measure: topic[5]?topicLookup[topic[5]][dataSelect.abval>0?'positive':'negative'][2]:"",
-        altVal: topic[5]?dec(place.data[topic[5]][selectors[1]]['2011'][selectors[3]]):"",
-        altValNat: topic[5]?dec(ew.data[topic[5]][selectors[1]]['2011'][selectors[3]]):"",
-        highLow: topic[5]?adjectify(place['data'][topic[5]][selectors[1]+'_rank'][2011][selectors[3]], ['higher', 'lower'], breaks):"", 
-        perc: dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]),
-        ave: (dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]/336)).toLocaleString(),
-        topic: topicLookup[selectors[0]+"_"+selectors[3]]['positive'][1],
-        opt: !topic[5]?fracPerc(place, selectors)[1][0][0]:"",
-        opt2: !topic[5]?fracPerc(place, selectors)[1][1][0]:"",
-        opt3: !topic[5]?fracPerc(place, selectors)[1][2][0]:"",
-        perc2: !topic[5]?fracPerc(place, selectors)[1][1][1]:"",
-        perc3: !topic[5]?fracPerc(place, selectors)[1][2][1]:"",
-    })
+    let sentence6
+    if (!perc) {
+        sentence6 = robojournalist(roboStrings["sixth_2"], {
+            lad: place.name,
+            alt: topicLookup[topic['alternative']+"_all"]['topic'],
+            measure: topicLookup[topic['alternative']+"_all"]['topicLong'],
+            altVal: dec(place.data[topic['alternative']][selectors[1]]['2011']['all']),
+            altValNat: dec(ew.data[topic['alternative']][selectors[1]]['2011']['all']),
+            highLow: adjectify(place['data'][topic['alternative']][selectors[1]+'_rank'][2011][selectors[3]], ['higher', 'lower'], breaks), 
+            perc: dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]),
+            ave: (dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]/336)).toLocaleString(),
+            topic: topicLookup['topic'],
+        })  
+    } else {
+        sentence6 = robojournalist(roboStrings["sixth_1"], {
+            lad: place.name,
+            alt: topic['alternative'],
+            perc: dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]),
+            ave: (dec(ew.data[selectors[0]][selectors[1]]['2011'][selectors[3]]/336)).toLocaleString(),
+            topic: topic['topic'],
+            opt: fracPerc(place, selectors)[1][0][0],
+            opt2: fracPerc(place, selectors)[1][1][0],
+            opt3: fracPerc(place, selectors)[1][2][0],
+            perc2: dec(ew.data[selectors[0]][selectors[1]]['2011'][fracPerc(place, selectors)[1][1][0]]),
+            perc3: dec(ew.data[selectors[0]][selectors[1]]['2011'][fracPerc(place, selectors)[1][2][0]]),
+        })
+    }
+    
     console.log("fracPerc(place, selectors)", fracPerc(place, selectors));
 
     return [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6]
 }
 
-
 export { reportGenerator };
-
-

@@ -235,9 +235,7 @@
 <Tabs>
 	<TabList>
 		<Tab>1. Area Report</Tab>
-		<Tab>2. Area Profiles</Tab>
-		<Tab>3. Reports</Tab>
-		<Tab>4. Bullet points</Tab>
+		<Tab>2. Mini Profiles</Tab>
 	</TabList>
 
 	<TabPanel>
@@ -248,13 +246,6 @@
 		<CHUNKS place={place} ew={ew} quartiles={quartiles}></CHUNKS>
 	</TabPanel>
 
-	<TabPanel>
-		<REPORT place={place}></REPORT>
-	</TabPanel>
-
-	<TabPanel>
-		<BULLET place={place}></BULLET>
-	</TabPanel>
 </Tabs>
 
 {#if place.children[0]}

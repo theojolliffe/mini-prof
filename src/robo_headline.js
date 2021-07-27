@@ -16,11 +16,12 @@ function headGenerator(place, dataSelect) {
         selectors[4] = null
     }
     let keyWord = selectors[0] + "_" + selectors[3];
-    let topic = topicLookup[keyWord][dataSelect.abVal>0?'positive':'negative'];
+    let topic = topicLookup[keyWord];
 
-    let roboSentence1 = robojournalist(roboStrings["headline_"+topic[0]], {
-        topic: topic[1],
+    let roboSentence1 = robojournalist(roboStrings["headline_"+topic['id']], {
+        topic: topic['topic'],
         ladName: place.name,
+        verb: topic['verb'][place.data[selectors[0]][selectors[1]][selectors[2]][selectors[3]]>0?'positive':'negative'] 
     })
 
     let thisTopic = dataSelect['label'].split("_")[0]

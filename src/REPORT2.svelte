@@ -225,7 +225,7 @@ console.log("priorities(place)", priorities(place))
 	.section-2 > div {
 		margin-top: 30px;
 	}
-	h1, h3, h4:first-letter {
+	h1:first-letter, h3:first-letter, h4:first-letter {
 		text-transform: capitalize;
 	}
 	p:first-letter {

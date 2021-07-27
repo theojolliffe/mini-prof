@@ -1,121 +1,194 @@
 export default{
-    travel_car_van: {
-        positive: [
-            1, "CARVAN"
-        ], 
-        negative: [
-            1, "CARVAN"
-        ]},
-    'age10yr_30-39': {
-            positive: [
-                1, "Age 30"
-            ], 
-            negative: [
-                1, "Age 30"
-            ]},
-    population_all: {
-        positive: [
-            2, "population", "resident population", "populous", "headcount", "density"
-        ], 
-        negative: [
-            2, "population", "resident population", "populous", "headcount", "density"
-        ]},
-    density: {
-        positive: [
-            1, "population density", "people per hectare"
-        ],
-        negative: [
-            1, "population density", "people per hectare"
-        ],
+    'travel_car_van': {
+        id: 1,
+        topic: "car commuting",
+        topicLong: "residents travelling to work by car or van",
+        adjective: "car reliant",
+        synonym: "drivers",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "travel_bicycle",
     },
-    agemed_all: {
-        positive: [
-            1, "average age", "average age"
-        ], 
-        negative: [
-            1, "average age", "average age"
-        ]}, 
-    health_good: {
-        positive: [
-            1, "health", "healthy residents", "healthy", "healthy"
-        ], 
-        negative: [
-            1,"health", "healthy residents", "healthy", "healthy"
-        ]},
-    health_bad: {
-        positive: [
-            1, "health deteriorates", "health deteriorates"
-        ], 
-        negative: [
-            1, "health deteriorates", "health deteriorates"
-        ]},
-    health_fair: {
-        positive: [
-            1, "fair health", "fair health"
-        ], 
-        negative: [
-            1, "fair health", "fair health"
-        ]},
-    ethnicity_asian: {
-        positive: [
-            1, "proportion of Asian residents", "proportion of Asian residents"
-        ], 
-        negative: [
-            1, "proportion of Asian residents", "proportion of Asian residents"
-        ]},
-    ethnicity_black: {
-        positive: [
-            1, "proportion of black residents", "proportion of black residents"
-        ], negative: [
-            1, "proportion of black residents", "proportion of black residents"
-        ]},
-    ethnicity_white: {
-        positive: [
-            1, "proportion of white residents", "proportion of white residents"
-        ], 
-        negative: [
-            1, "proportion of white residents", "proportion of white residents"
-        ]},
-    ethnicity_mixed: {
-        positive: [
-            1, "proportion of residents of mixed ethnicity", "proportion of residents of mixed ethnicity"
-        ], 
-        negative: [
-            1, "proportion of residents of mixed ethnicity", "proportion of residents of mixed ethnicity"
-        ]},
+    'age10yr_30-39': {
+        id: 1,
+        topic: "age",
+        topicLong: "age profile",
+        adjective: "age",
+        synonym: "10 year",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "agemed",
+    },
+    'population_all': {
+        id: 2,
+        topic: "population",
+        topicLong: "resident population",
+        adjective: "populous",
+        synonym: "headcount",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "density",
+    },
+    'density_all': {
+        id: 2,
+        topic: "population density",
+        topicLong: "people per hectare",
+        adjective: "density",
+        synonym: "population density",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "population",
+    },
+    'agemed_all': {
+        id: 2,
+        topic: "age",
+        topicLong: "average age",
+        adjective: "old",
+        synonym: "average age",
+        verb: {
+            positive: "older",
+            negative: "younger",
+            },
+        alternative: "age10yr",
+    },
+    'health_good': {
+        id: 1,
+        topic: "health",
+        topicLong: "residents describing their health as good",
+        adjective: "healthy",
+        synonym: "healthy residents",
+        verb: {
+            positive: "improve",
+            negative: "deteriorate",
+            },
+        alternative: "health_bad",
+    },
+    'health_bad': {
+        id: 1,
+        topic: "health",
+        topicLong: "healthy residents",
+        adjective: "healthy",
+        synonym: "healthy",
+        verb: {
+            positive: "deteriorate",
+            negative: "improve",
+            },
+        alternative: "health_good",
+    },
+    'ethnicity_asian': {
+        id: 1,
+        topic: "proportion of Asian residents",
+        topicLong: "proportion of Asian residents",
+        adjective: "proportion of Asian residents",
+        synonym: "proportion of Asian residents",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "ethnicity_white",
+    },
+    'ethnicity_black': {
+        id: 1,
+        topic: "proportion of Black residents",
+        topicLong: "proportion of Black residents",
+        adjective: "proportion of Black residents",
+        synonym: "proportion of Black residents",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "ethnicity_white",
+    },
+    'ethnicity_white': {
+        id: 1,
+        topic: "proportion of White residents",
+        topicLong: "proportion of White residents",
+        adjective: "proportion of White residents",
+        synonym: "proportion of White residents",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "ethnicity_black",
+    },
+    'ethnicity_mixed': {
+        id: 1,
+        topic: "proportion of Mixed residents",
+        topicLong: "proportion of Mixed residents",
+        adjective: "proportion of Mixed residents",
+        synonym: "proportion of Mixed residents",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "ethnicity_white",
+    },
     'economic_self-employed': {
-        positive: [
-            1, "rate of self-employment", "rate of self-employment"
-        ], 
-        negative: [
-            1, "rate of self-employment", "rate of self-employment"
-        ]},
-    economic_employee: {
-        positive: [
-            1, "employment rate", "employment rate"
-        ], 
-        negative: [
-            1, "employment rate", "employment rate"
-        ]},
-    economic_inactive: {
-        positive: [
-            1, "economic inactivity", "economic inactivity"
-        ], 
-        negative: [
-            1, "economic inactivity", "economic inactivity"
-        ]},
-    economic_unemployed: {
-        positive: [
-            1, "unemployment", "unemployment"
-        ], 
-        negative: [
-            1, "unemployment", "unemployment"
-        ]},
-    economic_students: {
-        positive: [
-            1, "proportion of students", "proportion of students"
-        ], 
-        negative: [
-            1, "proportion of students", "proportion of students"
-        ]},
+        id: 1,
+        topic: "self-employment",
+        topicLong: "proportion of self-employed residents",
+        adjective: "self-employed",
+        synonym: "rate of self-employment",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "economic_employee",
+    },
+    'economic_employee': {
+        id: 1,
+        topic: "rate of employment",
+        topicLong: "proportion of employed residents",
+        adjective: "employed",
+        synonym: "employment",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "economic_unemployed",
+    },
+    'economic_inactive': {
+        id: 1,
+        topic: "economic inactivity",
+        topicLong: "proportion of economically inactive residents",
+        adjective: "economically inactive",
+        synonym: "rate of economic inactivity",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "economic_employee",
+    },
+    'economic_unemployed': {
+        id: 1,
+        topic: "rate of unemployment",
+        topicLong: "proportion of unemployed residents",
+        adjective: "unemployed",
+        synonym: "unemployment",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "economic_employee",
+    },
+    'economic_students': {
+        id: 1,
+        topic: "students",
+        topicLong: "proportion of residents who are students",
+        adjective: "student",
+        synonym: "proportion of students",
+        verb: {
+            positive: "increase",
+            negative: "decrease",
+            },
+        alternative: "economic_employee",
+    },
 }
